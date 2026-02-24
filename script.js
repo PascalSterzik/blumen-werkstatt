@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Blumen Werkstatt — Premium JavaScript
+   Blumen Werkstatt: Premium JavaScript
    ========================================================================== */
 
 // Mobile Navigation
@@ -86,7 +86,19 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in, .stagger-parent').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.fade-in, .stagger-parent, .vine-divider').forEach(el => revealObserver.observe(el));
+
+// Petal fall animation on CTA banner scroll
+const petalObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const petalFall = entry.target.querySelector('.petal-fall');
+            if (petalFall) petalFall.classList.add('petal-fall-visible');
+            petalObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+document.querySelectorAll('.cta-banner').forEach(el => petalObserver.observe(el));
 
 // Gallery Lightbox
 function initLightbox() {
@@ -139,7 +151,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Contact form (client-side only — no backend)
+// Contact form (client-side only, no backend)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {

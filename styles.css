@@ -1,5 +1,5 @@
 /* =============================================
-   Blumen Werkstatt — Carina Thiesen
+   Blumen Werkstatt: Carina Thiesen
    Zeltingen-Rachtig | blumen-werkstatt-carina.de
    ============================================= */
 
@@ -276,7 +276,7 @@ section { padding: 80px 0; }
 .header { transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, background 0.3s ease; }
 .header.nav-hidden { transform: translateY(-100%); }
 
-/* Improved fade-in (organic — gentle bloom) */
+/* Improved fade-in (organic, gentle bloom) */
 .fade-in { opacity: 0; transform: translateY(32px) scale(0.98); transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .fade-in.visible { opacity: 1; transform: translateY(0) scale(1); }
 
@@ -284,7 +284,7 @@ section { padding: 80px 0; }
 .stagger-parent > * { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .stagger-parent.visible > * { opacity: 1; transform: translateY(0); }
 
-/* Hero organic entrance — gentle growth from center */
+/* Hero organic entrance: gentle growth from center */
 .hero-content .section-label { animation: heroBloom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both; }
 .hero-content h1 { animation: heroBloom 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both; }
 .hero-content p { animation: heroBloom 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both; }
@@ -295,7 +295,7 @@ section { padding: 80px 0; }
 .hero-bg img { animation: heroZoom 20s ease-in-out infinite alternate; }
 @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.05); } }
 
-/* Card hover — organic lift with warmth */
+/* Card hover: organic lift with warmth */
 .card { transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease; }
 .card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(143,168,138,0.15); }
 
@@ -333,7 +333,7 @@ section { padding: 80px 0; }
 .fade-in.visible .signature { animation: signatureFade 1.2s ease 0.6s both; }
 @keyframes signatureFade { from { opacity: 0; transform: translateX(-12px); } to { opacity: 0.7; transform: translateX(0); } }
 
-/* Organic accent — leaf-like line under section titles */
+/* Organic accent: leaf-like line under section titles */
 .section-title { position: relative; display: inline-block; }
 .section-title::after { content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--sage), transparent); transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s; border-radius: 2px; }
 .fade-in.visible .section-title::after,
@@ -390,3 +390,173 @@ section { padding: 80px 0; }
 .section-label { opacity: 0; transform: translateX(-12px); transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .fade-in.visible .section-label,
 .visible .section-label { opacity: 1; transform: translateX(0); }
+
+/* ============================================
+   20. Botanical Decorative Elements
+   Flowers, leaves, vines & bee accents
+   ============================================ */
+
+/* Vine Divider: growing vine line with flower center */
+.vine-divider {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    z-index: 2;
+}
+.vine-divider .vine-line {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--sage-light) 15%, var(--sage) 50%, var(--sage-light) 85%, transparent 100%);
+    opacity: 0.3;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.vine-divider.visible .vine-line { transform: scaleX(1); }
+.vine-divider .vine-flower {
+    position: relative;
+    z-index: 2;
+    color: var(--sage);
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+    transition: opacity 0.5s ease 0.9s, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s;
+}
+.vine-divider.visible .vine-flower {
+    opacity: 0.5;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Vine flower bloom animation */
+@keyframes flowerBloom {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.15) rotate(5deg); }
+    60% { transform: scale(0.95) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+.vine-divider.visible .vine-flower svg { animation: flowerBloom 1.5s ease 1.6s; }
+
+/* Leaf Corner Decorations */
+.leaf-decoration {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.05;
+    color: var(--sage);
+}
+.leaf-top-right {
+    top: 20px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(25deg);
+}
+.leaf-bottom-left {
+    bottom: 20px;
+    left: -10px;
+    width: 90px;
+    height: 90px;
+    transform: rotate(-30deg) scaleX(-1);
+}
+.leaf-top-left {
+    top: 25px;
+    left: -8px;
+    width: 95px;
+    height: 95px;
+    transform: rotate(-15deg);
+}
+
+/* Floating Bee (hero accent) */
+.bee-float {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.12;
+}
+@keyframes beeFlight {
+    0% { transform: translate(0, 0) rotate(-5deg); }
+    15% { transform: translate(12px, -8px) rotate(3deg); }
+    30% { transform: translate(-5px, -14px) rotate(-8deg); }
+    45% { transform: translate(8px, -4px) rotate(5deg); }
+    60% { transform: translate(-3px, -12px) rotate(-3deg); }
+    75% { transform: translate(10px, -6px) rotate(6deg); }
+    100% { transform: translate(0, 0) rotate(-5deg); }
+}
+.bee-float svg { animation: beeFlight 8s ease-in-out infinite; }
+
+/* Page Hero Flower Float */
+.page-hero { position: relative; overflow: hidden; }
+.page-hero .flower-float {
+    position: absolute;
+    right: 8%;
+    bottom: 12px;
+    opacity: 0.07;
+    color: var(--sage-dark);
+    transform: rotate(-10deg);
+    pointer-events: none;
+}
+
+/* CTA to Footer Petal Fall */
+.cta-banner { position: relative; z-index: 2; }
+.cta-banner .petal-fall {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    pointer-events: none;
+    z-index: 3;
+    overflow: visible;
+}
+.falling-petal {
+    position: absolute;
+    bottom: -25px;
+    pointer-events: none;
+    opacity: 0;
+    transform: scaleY(0) rotate(0deg);
+    transform-origin: top center;
+}
+.petal-fall-visible .falling-petal {
+    opacity: 1;
+    transform: scaleY(1) rotate(var(--petal-rotate, 0deg));
+    transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+}
+.falling-petal-1 { left: 10%; --petal-rotate: 15deg; transition-delay: 0s; }
+.falling-petal-2 { left: 25%; --petal-rotate: -10deg; transition-delay: 0.15s; }
+.falling-petal-3 { left: 42%; --petal-rotate: 20deg; transition-delay: 0.3s; }
+.falling-petal-4 { left: 58%; --petal-rotate: -15deg; transition-delay: 0.1s; }
+.falling-petal-5 { left: 75%; --petal-rotate: 8deg; transition-delay: 0.25s; }
+.falling-petal-6 { left: 88%; --petal-rotate: -20deg; transition-delay: 0.05s; }
+.petal-fall-visible .falling-petal-1 { transition-delay: 0s; }
+.petal-fall-visible .falling-petal-2 { transition-delay: 0.15s; }
+.petal-fall-visible .falling-petal-3 { transition-delay: 0.3s; }
+.petal-fall-visible .falling-petal-4 { transition-delay: 0.1s; }
+.petal-fall-visible .falling-petal-5 { transition-delay: 0.25s; }
+.petal-fall-visible .falling-petal-6 { transition-delay: 0.05s; }
+
+/* Leaf mini-divider between service blocks */
+.leaf-mini-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    opacity: 0.2;
+    color: var(--sage);
+}
+
+/* Responsive: hide decorations on small screens */
+@media (max-width: 768px) {
+    .leaf-decoration,
+    .page-hero .flower-float,
+    .bee-float { display: none; }
+    .vine-divider { margin: 0 16px; }
+}
+@media (max-width: 480px) {
+    .vine-divider { height: 28px; }
+    .petal-fall { display: none; }
+}
