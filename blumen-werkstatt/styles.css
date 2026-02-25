@@ -391,3 +391,14 @@ section { padding: 80px 0; }
 .fade-in.visible .section-label,
 .visible .section-label { opacity: 1; transform: translateX(0); }
 
+/* 20. Decorative Elements - Section Dividers & Corner Accents */
+.section-divider { width: 100%; text-align: center; padding: 24px 0; line-height: 0; }
+.divider-img { max-width: 500px; width: 70%; height: auto; display: inline-block; opacity: 0.8; }
+
+.corner-accent { z-index: 1; }
+
+@media (max-width: 768px) {
+    .corner-accent { width: 100px !important; }
+    .divider-img { width: 85%; }
+}
+
