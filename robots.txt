@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/decoratives/
+
+Sitemap: https://blumen-werkstatt.vercel.app/sitemap.xml

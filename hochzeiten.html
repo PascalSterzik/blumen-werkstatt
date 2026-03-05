@@ -1,248 +1,1014 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hochzeitsfloristik · Blumen Werkstatt Zeltingen-Rachtig</title>
-    <meta name="description" content="Hochzeitsfloristik von der Blumen Werkstatt: Brautsträuße, Kirchenschmuck, Tischdeko und mehr. Persönliche Beratung an der Mosel.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hochzeitsfloristik · Brautstrauß & Tischdeko | Blumen Werkstatt Mosel</title>
+  <meta name="description" content="Individuelle Hochzeitsfloristik an der Mosel: Brautstrauß, Kirchenschmuck, Tischdekoration und mehr. Persönliche Beratung von Floristin Carina Thiesen in Zeltingen-Rachtig.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blumen-werkstatt.de/hochzeiten">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hochzeitsfloristik · Brautstrauß & Tischdeko | Blumen Werkstatt Mosel">
+  <meta property="og:description" content="Individuelle Hochzeitsfloristik an der Mosel: Brautstrauß, Kirchenschmuck, Tischdekoration und mehr.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blumen-werkstatt.de/hochzeiten">
+  <meta property="og:image" content="https://blumen-werkstatt.de/images/hochzeit/strauss.jpg">
+  <meta property="og:locale" content="de_DE">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lora', serif;
+      color: #2c2c2c;
+      line-height: 1.6;
+      background-color: #faf8f6;
+    }
+
+    body.has-whatsapp {
+      padding-bottom: 80px;
+    }
+
+    /* Grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' fill='%23000' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #8B4513;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #c41e3a, #d4a574);
+      z-index: 1000;
+      width: 0%;
+    }
+
+    /* Header */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #8B4513;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: #2c2c2c;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #c41e3a;
+    }
+
+    nav a.active {
+      color: #c41e3a;
+      font-weight: 600;
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #c41e3a;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Hero section */
+    .hero {
+      background: linear-gradient(135deg, #f5e6d3 0%, #faf8f6 100%);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .breadcrumbs a {
+      color: #8B4513;
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #8B4513;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero-quote {
+      font-family: 'Caveat', cursive;
+      font-size: 1.8rem;
+      color: #c41e3a;
+      font-style: italic;
+      margin-top: 1.5rem;
+      font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .hero-quote {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* Offerings section */
+    .offerings {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #8B4513;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 700;
+    }
+
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .offering-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offering-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .offering-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .offering-content {
+      padding: 1.5rem;
+    }
+
+    .offering-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #8B4513;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .offering-content p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Process section */
+    .process {
+      background: #f5e6d3;
+      padding: 4rem 1.5rem;
+      margin: 4rem 0;
+    }
+
+    .process-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .process-step {
+      text-align: center;
+    }
+
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #c41e3a;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .process-step h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #8B4513;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .process-step p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    /* Gallery section */
+    .gallery {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.05);
+    }
+
+    /* FAQ section */
+    .faq {
+      background: white;
+      padding: 4rem 1.5rem;
+      margin: 4rem 0;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-items {
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1.5rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: #8B4513;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      color: #c41e3a;
+    }
+
+    .faq-toggle {
+      font-size: 1.3rem;
+      color: #c41e3a;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      margin-top: 1rem;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #c41e3a 0%, #8B4513 100%);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      margin: 4rem 0;
+    }
+
+    .cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .cta-banner p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.95;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #8B4513;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c2c2c;
+      color: #f0f0f0;
+      padding: 3rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h4 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a574;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #b0b0b0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #d4a574;
+    }
+
+    .footer-divider {
+      border-top: 1px solid #444;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #444;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: #d4a574;
+    }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 40;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+
+    /* Mobile CTA bar */
+    .mobile-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #c41e3a;
+      padding: 0.8rem;
+      text-align: center;
+      display: none;
+      z-index: 41;
+    }
+
+    .mobile-cta a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      body.has-whatsapp {
+        padding-bottom: 120px;
+      }
+
+      .mobile-cta {
+        display: block;
+      }
+
+      .header-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+      }
+
+      nav a {
+        display: block;
+        padding: 0.5rem 0;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 140px;
+      right: 20px;
+      background: #8B4513;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 39;
+      border: none;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .back-to-top {
+        bottom: 180px;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="has-whatsapp">
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+  <div class="scroll-progress"></div>
 
-<!-- Scroll Progress Bar -->
-<div class="scroll-progress"></div>
-
-<!-- Grain Texture Overlay -->
-<div class="grain"></div>
-
-<!-- Header -->
-<header class="header" id="header">
-    <div class="container">
-        <a href="index.html" class="header-logo">
-            <img src="images/logo.png" alt="Blumen Werkstatt">
-        </a>
-        <nav class="nav" id="nav">
-            <a href="index.html" class="nav-link">Startseite</a>
-            <a href="leistungen.html" class="nav-link">Leistungen</a>
-            <a href="hochzeiten.html" class="nav-link active">Hochzeiten</a>
-            <a href="workshops.html" class="nav-link">Workshops</a>
-            <a href="kontakt.html" class="nav-link">Kontakt</a>
-        </nav>
-        <a href="kontakt.html" class="header-cta btn btn-sage">Termin anfragen</a>
-        <button class="hamburger" id="hamburger" aria-label="Menü">
-            <span></span><span></span><span></span>
-        </button>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">Blumen Werkstatt</a>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="hochzeiten.html" class="active">Hochzeiten</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-<!-- Page Hero -->
-<section class="page-hero">
-    <span class="section-label">Hochzeitsfloristik</span>
-    <h1>Blumen für Ihren schönsten Tag</h1>
-    <p>Jede Hochzeit ist einzigartig, und die Blumen sollten es auch sein. Wir gestalten mit Ihnen gemeinsam alles, was Ihren Tag zum Blühen bringt.</p>
-</section>
+  <!-- Main content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="breadcrumbs">
+          <a href="index.html">Startseite</a> <span>&gt;</span> Hochzeiten
+        </div>
+        <h1>Hochzeitsfloristik</h1>
+        <p class="hero-quote">"Blumen sind die schönsten Worte der Natur"</p>
+      </div>
+    </section>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
+    <!-- Offerings Section -->
+    <section class="offerings">
+      <h2 class="section-title">Unsere Hochzeitsangebote</h2>
+      <div class="offerings-grid">
+        <div class="offering-card">
+          <img src="images/hochzeit/strauss.jpg" alt="Brautstrauß" class="offering-image" loading="lazy">
+          <div class="offering-content">
+            <h3>Brautstrauß & Anstecker</h3>
+            <p>Der perfekte Brautstrauß wird gemeinsam mit Ihnen entwickelt. Von klassisch elegant bis modern verspielt, kreieren wir genau das, was Sie sich vorstellen. Auch Anstecker für die Trauzeugen sind möglich.</p>
+          </div>
+        </div>
 
-<!-- Intro -->
-<section>
-    <div class="container-narrow text-center fade-in">
-        <p class="wedding-hero-quote">„Blumen sind die Sprache, die jeder versteht, besonders an dem Tag, an dem zwei Menschen Ja zueinander sagen."</p>
-        <img src="images/unterschrift.png" alt="Carina Thiesen" class="signature" style="margin: 20px auto 0;">
+        <div class="offering-card">
+          <img src="images/hochzeit/kirche.jpg" alt="Kirchenschmuck" class="offering-image" loading="lazy">
+          <div class="offering-content">
+            <h3>Kirchenschmuck</h3>
+            <p>Die Kirche wird zur Kulisse Ihrer Liebe. Wir dekorieren Altar, Eingänge und Bänke mit stimmungsvollen Blumenarrangements, die das Sakrale unterstreichen und eine unvergessliche Atmosphäre schaffen.</p>
+          </div>
+        </div>
+
+        <div class="offering-card">
+          <img src="images/hochzeit/dekoration.jpg" alt="Tischdekoration" class="offering-image" loading="lazy">
+          <div class="offering-content">
+            <h3>Tischdekoration</h3>
+            <p>Von dezenten Tischgestecken bis zu opulenten Arrangements, Vasen und Kerzenleuchtern, die Ihre Festtafel in ein blühendes Paradies verwandeln. Wir schaffen eine harmonische Tischdekoration für alle Gäste.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+      <div class="process-container">
+        <h2 class="section-title">Unser Hochzeits-Prozess</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h4>Beratungsgespräch</h4>
+            <p>Wir besprechen Ihre Vorstellungen, Ihre Hochzeitsfarbenlehre, den Stil und Ihre persönlichen Wünsche in aller Ruhe.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h4>Konzept & Moodboard</h4>
+            <p>Auf Basis unseres Gesprächs entwickeln wir ein Konzept mit Moodboard und zeigen Ihnen verschiedene Varianten der Gestaltung.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h4>Probebinden</h4>
+            <p>Beim Probebinden sehen Sie Ihren Brautstrauß und alle Arrangements in real und können noch kleinere Anpassungen vornehmen.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h4>Der große Tag</h4>
+            <p>Am Hochzeitstag liefern und dekorieren wir alle Blumenarrangements und kümmern uns um alle Details, damit Ihre Hochzeit perfekt wird.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <h2 class="section-title">Hochzeits-Galerie</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/hochzeit/strauss.jpg" alt="Hochzeitssträuße" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/dekoration.jpg" alt="Tischdekoration bei Hochzeit" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/kirche.jpg" alt="Blumenschmuck in der Kirche" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/bouquet.jpg" alt="Eleganter Hochzeitsstrauß" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/kerze-vase.jpg" alt="Blumenvase mit Kerze" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/kirche-stuehle.jpg" alt="Dekoration Kirchenstühle" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/stuhl-blumen.jpg" alt="Stuhldekorationen" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/tisch-kerze.jpg" alt="Tisch mit Blumen und Kerzen" class="gallery-image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/hochzeit/paar-strauss.jpg" alt="Brautpaar mit Hochzeitsstrauß" class="gallery-image" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="faq-container">
+        <h2 class="section-title">Häufig gestellte Fragen</h2>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Wann sollte ich mich für die Hochzeitsfloristik melden?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Ideal ist es, sich etwa 3-6 Monate vor dem geplanten Hochzeitstermin bei uns zu melden. Das gibt uns genug Zeit für ein ausgiebiges Beratungsgespräch, die Planung und das Probebinden. Bei sehr kurzfristigen Anfragen versuchen wir gerne, noch Platz zu machen, können aber keine Garantie geben.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Kann ich Blumen mitbringen, die in den Strauß eingebunden werden?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Gerne können Sie Blumen mitbringen, die Sie persönlich sind bedeutsam sind. Allerdings müssen diese mit unserem Floristenblick in Farbe, Form und Haltbarkeit zum Gesamtkonzept passen. Wir besprechen das gerne mit Ihnen im Beratungsgespräch.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Arbeiten Sie auch an Wochenenden und Feiertagen?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Hochzeiten finden ja meistens am Wochenende statt, daher sind wir gerne auch samstags und sonntags für Sie tätig. Feiertage klären wir individuell mit Ihnen ab. Ein Zuschlag für Wochenenden und Feiertage ist möglich.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Dekorieren Sie auch die Location?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Selbstverständlich! Wir dekorieren nicht nur Kirche und Trauort, sondern auch Ihre Feststätte. Ob Eingangsbereiche, Tische, Bar oder Tanzfläche, wir schaffen eine durchgehend harmonische und stimmungsvolle Blumendekoration.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Was passiert, wenn bestimmte Blumen nicht verfügbar sind?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Saisonal bedingt oder bei Lieferschwierigkeiten können einzelne Blumensorten ausfallen. In diesem Fall stellen wir zeitnah ähnliche Sorten vor, die den gleichen ästhetischen und stimmungsvollen Effekt erzeugen. Mit unserem großen Netzwerk finden wir immer eine passende Lösung.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <h2>Bereit für Ihren Traumstrauß?</h2>
+      <p>Lassen Sie uns gemeinsam Ihre Hochzeitsfloristik planen und realisieren.</p>
+      <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Hochzeitsfloristik.%20K%C3%B6nnen%20wir%20einen%20Beratungstermin%20vereinbaren%3F" class="cta-button">Mein Traumstrauß besprechen</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="hochzeiten.html">Hochzeiten</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Verbindung</h4>
+        <div class="social-icons">
+          <a href="https://wa.me/491781361809" class="social-icon" title="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.531.92-2.859 2.229-3.869 3.623-.995 1.373-1.55 2.902-1.643 4.512-.052 1.01.165 2.01.533 2.907l.711 1.711-1.835 5.326 5.514-1.828 1.828.547c.763.227 1.56.354 2.37.354 1.017 0 2.004-.108 2.948-.32 1.933-.441 3.748-1.503 5.207-3.018 1.451-1.502 2.36-3.44 2.684-5.439.348-2.216-.037-4.411-1.065-6.334-.换.32-2.182-2.577-4.324-3.996-2.068-1.32-4.579-2.047-7.228-2.047z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Über uns</h4>
+        <p>Blumen Werkstatt, Ihre Floristerei an der Mosel in Zeltingen-Rachtig. Individuelle Floristik für jeden Anlass.</p>
+      </div>
     </div>
-</section>
 
-<!-- What We Offer -->
-<section class="section-alt">
-    <div class="container">
-        <div class="text-center fade-in">
-            <span class="section-label">Unser Angebot</span>
-            <h2 class="section-title">Alles aus einer Hand: von der Beratung bis zum Altar</h2>
-        </div>
-        <div class="grid-3" style="margin-top: 40px;">
-            <div class="card fade-in fade-in-delay-1">
-                <img src="images/hochzeit/bouquet.jpg" alt="Brautstrauß" class="card-img">
-                <div class="card-body">
-                    <h3>Brautstrauß &amp; Anstecker</h3>
-                    <p>Individuell abgestimmt auf Ihr Kleid, Ihre Farbwelt und Ihren Stil. Jeder Brautstrauß wird am Morgen Ihrer Hochzeit frisch gebunden.</p>
-                </div>
-            </div>
-            <div class="card fade-in fade-in-delay-2">
-                <img src="images/hochzeit/kirche.jpg" alt="Kirchenschmuck" class="card-img">
-                <div class="card-body">
-                    <h3>Kirche &amp; Trauung</h3>
-                    <p>Altarschmuck, Bankdekorationen, Eingangsbogen. Wir verwandeln die Kirche oder Ihren Trauort in ein Blütenmeer, das zu Ihrem Fest passt.</p>
-                </div>
-            </div>
-            <div class="card fade-in fade-in-delay-3">
-                <img src="images/hochzeit/tisch-kerze.jpg" alt="Tischdekoration" class="card-img">
-                <div class="card-body">
-                    <h3>Tischdeko &amp; Feier</h3>
-                    <p>Tischgestecke, Kerzenarrangements, Raumdekoration, damit Ihre Feier genauso stimmungsvoll wird wie die Trauung.</p>
-                </div>
-            </div>
-        </div>
+    <div class="footer-divider">
+      <p>&copy; 2024 Blumen Werkstatt. Alle Rechte vorbehalten.</p>
     </div>
-</section>
+  </footer>
 
-<!-- How It Works -->
-<section>
-    <div class="container">
-        <div class="text-center fade-in">
-            <span class="section-label">So läuft es ab</span>
-            <h2 class="section-title">Von der ersten Idee bis zum großen Tag</h2>
-        </div>
-        <div class="grid-4" style="margin-top: 40px;">
-            <div class="text-center fade-in fade-in-delay-1">
-                <div style="font-size: 2rem; color: var(--sage); margin-bottom: 12px;">01</div>
-                <h4>Kennenlernen</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 8px;">Wir treffen uns persönlich, schauen uns Bilder und Ideen an und sprechen über Ihre Vorstellungen.</p>
-            </div>
-            <div class="text-center fade-in fade-in-delay-2">
-                <div style="font-size: 2rem; color: var(--sage); margin-bottom: 12px;">02</div>
-                <h4>Konzept</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 8px;">Ich entwickle ein Blumenkonzept, das zu Ihrem Stil, Ihrer Location und Ihrem Budget passt.</p>
-            </div>
-            <div class="text-center fade-in fade-in-delay-3">
-                <div style="font-size: 2rem; color: var(--sage); margin-bottom: 12px;">03</div>
-                <h4>Umsetzung</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 8px;">Am Hochzeitstag kümmere ich mich um alles: Aufbau, Deko, letzte Details. Sie müssen an nichts denken.</p>
-            </div>
-            <div class="text-center fade-in">
-                <div style="font-size: 2rem; color: var(--sage); margin-bottom: 12px;">04</div>
-                <h4>Genießen</h4>
-                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 8px;">Sie genießen Ihren Tag, und die Blumen tun leise ihren Dienst und machen jeden Moment schöner.</p>
-            </div>
-        </div>
-    </div>
-</section>
+  <!-- WhatsApp float button -->
+  <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Hochzeitsfloristik.%20K%C3%B6nnen%20wir%20einen%20Beratungstermin%20vereinbaren%3F" class="whatsapp-float" title="Schreiben Sie uns auf WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.531.92-2.859 2.229-3.869 3.623-.995 1.373-1.55 2.902-1.643 4.512-.052 1.01.165 2.01.533 2.907l.711 1.711-1.835 5.326 5.514-1.828 1.828.547c.763.227 1.56.354 2.37.354 1.017 0 2.004-.108 2.948-.32 1.933-.441 3.748-1.503 5.207-3.018 1.451-1.502 2.36-3.44 2.684-5.439.348-2.216-.037-4.411-1.065-6.334-1.066-1.99-2.646-3.711-4.578-4.842-1.875-.96-3.946-1.375-6.064-1.375z"></path>
+    </svg>
+  </a>
 
-<!-- Gallery -->
-<section class="section-sage">
-    <div class="container">
-        <div class="text-center fade-in">
-            <span class="section-label">Galerie</span>
-            <h2 class="section-title">Eindrücke vergangener Hochzeiten</h2>
-        </div>
-        <div class="gallery-grid" style="margin-top: 40px;">
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/strauss.jpg" alt="Brautstrauß nahaufnahme">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/kirche-stuehle.jpg" alt="Stühle in der Kirche geschmückt">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/stuhl.jpg" alt="Stuhl mit Blumen">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/dekoration.jpg" alt="Hochzeitsdekoration">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/kerze-vase.jpg" alt="Kerze und Vase">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/stuehle.jpg" alt="Geschmückte Stühle">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/paar-strauss.jpg" alt="Brautpaar mit Strauß">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/tisch-kerze.jpg" alt="Tisch mit Kerzen und Blumen">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/hochzeit/paar.jpg" alt="Brautpaar">
-            </div>
-        </div>
-    </div>
-</section>
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" title="Nach oben scrollen">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
+  <!-- Mobile CTA bar -->
+  <div class="mobile-cta">
+    <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Hochzeitsfloristik.%20K%C3%B6nnen%20wir%20einen%20Beratungstermin%20vereinbaren%3F">WhatsApp Nachricht schreiben</a>
+  </div>
 
-<!-- CTA -->
-<section class="cta-banner">
-    <div class="container">
-        <h2>Planen Sie Ihre Hochzeit?</h2>
-        <p>Lassen Sie uns gemeinsam besprechen, wie wir Ihren Tag mit den perfekten Blumen abrunden.</p>
-        <a href="kontakt.html" class="btn btn-white">Beratungstermin vereinbaren</a>
-    </div>
-</section>
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Hochzeitsfloristik",
+    "description": "Individuelle Hochzeitsfloristik an der Mosel: Brautstrauß, Kirchenschmuck, Tischdekoration und mehr",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Blumen Werkstatt",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeltingen-Rachtig",
+        "addressLocality": "Zeltingen-Rachtig",
+        "addressCountry": "DE"
+      },
+      "telephone": "+491781361809"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Mosel"
+    },
+    "url": "https://blumen-werkstatt.de/hochzeiten"
+  }
+  </script>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <img src="images/logo.png" alt="Blumen Werkstatt" class="footer-logo">
-                <p class="footer-about">Ihre Floristin in Zeltingen-Rachtig. Sträuße, Hochzeitsfloristik und kreative Workshops an der Mosel, mit Liebe zum Detail.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/blumen.werkstatt_/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="tel:+491781361809" aria-label="Anrufen" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    </a>
-                    <a href="mailto:carina.thiesen@googlemail.com" aria-label="E-Mail" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <a href="index.html">Startseite</a>
-                <a href="leistungen.html">Leistungen</a>
-                <a href="hochzeiten.html">Hochzeiten</a>
-                <a href="workshops.html">Workshops</a>
-                <a href="kontakt.html">Kontakt</a>
-            </div>
-            <div class="footer-col">
-                <h4>Leistungen</h4>
-                <a href="leistungen.html">Sträuße &amp; Gestecke</a>
-                <a href="hochzeiten.html">Hochzeitsfloristik</a>
-                <a href="workshops.html">Workshops</a>
-                <a href="leistungen.html">Trauerfloristik</a>
-                <a href="leistungen.html">Dekorationen</a>
-            </div>
-            <div class="footer-col footer-contact">
-                <h4>Kontakt</h4>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    Marienstraße 31<br><span style="margin-left: 26px;">54492 Zeltingen-Rachtig</span>
-                </p>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <a href="tel:+491781361809">+49 178 136 1809</a>
-                </p>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <a href="mailto:carina.thiesen@googlemail.com">carina.thiesen@googlemail.com</a>
-                </p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Blumen Werkstatt · Carina Thiesen. Alle Rechte vorbehalten.</p>
-            <div class="footer-legal">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </div>
-        </div>
-    </div>
-</footer>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "@id": "#faq-1",
+        "name": "Wann sollte ich mich für die Hochzeitsfloristik melden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ideal ist es, sich etwa 3-6 Monate vor dem geplanten Hochzeitstermin bei uns zu melden. Das gibt uns genug Zeit für ein ausgiebiges Beratungsgespräch, die Planung und das Probebinden."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#faq-2",
+        "name": "Kann ich Blumen mitbringen, die in den Strauß eingebunden werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gerne können Sie Blumen mitbringen, die Sie persönlich sind bedeutsam sind. Allerdings müssen diese mit unserem Floristenblick in Farbe, Form und Haltbarkeit zum Gesamtkonzept passen."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#faq-3",
+        "name": "Arbeiten Sie auch an Wochenenden und Feiertagen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hochzeiten finden ja meistens am Wochenende statt, daher sind wir gerne auch samstags und sonntags für Sie tätig. Feiertage klären wir individuell mit Ihnen ab."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#faq-4",
+        "name": "Dekorieren Sie auch die Location?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Selbstverständlich! Wir dekorieren nicht nur Kirche und Trauort, sondern auch Ihre Feststätte. Ob Eingangsbereiche, Tische, Bar oder Tanzfläche, wir schaffen eine durchgehend harmonische und stimmungsvolle Blumendekoration."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#faq-5",
+        "name": "Was passiert, wenn bestimmte Blumen nicht verfügbar sind?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Saisonal bedingt oder bei Lieferschwierigkeiten können einzelne Blumensorten ausfallen. In diesem Fall stellen wir zeitnah ähnliche Sorten vor, die den gleichen ästhetischen und stimmungsvollen Effekt erzeugen."
+        }
+      }
+    ]
+  }
+  </script>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
+  <script>
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      document.querySelector('.scroll-progress').style.width = scrollProgress + '%';
+    });
 
-<script src="script.js"></script>
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+
+    // Close FAQ when clicking another
+    faqItems.forEach((item, index) => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', (e) => {
+        e.stopPropagation();
+        faqItems.forEach((otherItem, otherIndex) => {
+          if (otherIndex !== index) {
+            otherItem.classList.remove('active');
+          }
+        });
+        item.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>

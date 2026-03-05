@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entdecken Sie unsere schönsten Blumenarrangements, Hochzeitsfloristik, Workshop-Impressionen und kreative Dekorationen in der Galerie der Blumen Werkstatt.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Galerie · Floristik-Impressionen | Blumen Werkstatt Zeltingen-Rachtig">
+  <meta property="og:description" content="Entdecken Sie unsere schönsten Blumenarrangements, Hochzeitsfloristik, Workshop-Impressionen und kreative Dekorationen in der Galerie der Blumen Werkstatt.">
+  <meta property="og:url" content="https://blumen-werkstatt.de/galerie.html">
+  <meta property="og:site_name" content="Blumen Werkstatt">
+  <link rel="canonical" href="https://blumen-werkstatt.de/galerie.html">
+  
+  <title>Galerie · Floristik-Impressionen | Blumen Werkstatt Zeltingen-Rachtig</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Blumen Werkstatt Galerie",
+    "description": "Galerie mit Blumenarrangements, Hochzeitsfloristik, Workshops und Veranstaltungen",
+    "url": "https://blumen-werkstatt.de/galerie.html",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Blumen Werkstatt",
+      "url": "https://blumen-werkstatt.de"
+    }
+  }
+  </script>
+  
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="1"/><feColorMatrix type="saturate" values="0.15"/></filter><rect width="100" height="100" fill="%23f9f7f4" filter="url(%23noise)"/></svg>');
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.5;
+    }
+    
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+      padding: 0 1rem;
+    }
+    
+    .gallery-filter-btn {
+      padding: 0.75rem 1.5rem;
+      border: 1px solid #c9a876;
+      background-color: transparent;
+      color: #2d2d2d;
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      text-transform: capitalize;
+    }
+    
+    .gallery-filter-btn:hover {
+      background-color: #f0e8e0;
+    }
+    
+    .gallery-filter-btn.active {
+      background-color: #c9a876;
+      color: #ffffff;
+      border-color: #c9a876;
+    }
+    
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      padding: 0 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .gallery-masonry {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .gallery-masonry {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 0 3rem;
+      }
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      aspect-ratio: 1 / 1;
+      background-color: #f0e8e0;
+      cursor: pointer;
+      transition: opacity 0.4s ease;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .gallery-item[data-visible="true"] {
+      opacity: 1;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-item-title {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    
+    .gallery-item.hidden {
+      display: none;
+    }
+    
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #c9a876, #d9b89f);
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.2s ease;
+    }
+    
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #c9a876;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+      border-radius: 0 0 4px 0;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background-color: #c9a876;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+    
+    .back-to-top.show {
+      display: flex;
+    }
+    
+    .back-to-top:hover {
+      background-color: #b39464;
+      transform: translateY(-3px);
+    }
+    
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      background-color: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+    }
+    
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+    .mobile-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #c9a876;
+      padding: 1rem;
+      text-align: center;
+      display: none;
+      z-index: 990;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mobile-cta-bar a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-cta-bar {
+        display: block;
+      }
+      
+      body.has-whatsapp {
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body class="has-whatsapp">
+  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+  <div class="progress-bar"></div>
+  
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">Blumen Werkstatt</a>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="hochzeiten.html">Hochzeiten</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="galerie.html" class="active">Galerie</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Navigation öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Galerie</h1>
+        <p>Entdecken Sie unsere schönsten Floristik-Kreationen</p>
+      </div>
+    </section>
+    
+    <section class="breadcrumbs">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Startseite</a></li>
+            <li><span>Galerie</span></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-filters" role="group" aria-label="Galerien filtern">
+          <button class="gallery-filter-btn active" data-filter="all">Alle</button>
+          <button class="gallery-filter-btn" data-filter="straeusse">Sträuße</button>
+          <button class="gallery-filter-btn" data-filter="hochzeiten">Hochzeiten</button>
+          <button class="gallery-filter-btn" data-filter="workshops">Workshops</button>
+          <button class="gallery-filter-btn" data-filter="events">Events</button>
+        </div>
+        
+        <div class="gallery-masonry">
+          <!-- Sträuße -->
+          <div class="gallery-item" data-category="straeusse" data-visible="true">
+            <img src="images/galerie/muttertag.jpg" alt="Handgebundener Muttertagsstrauß" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Muttertagsstrauß</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="straeusse" data-visible="true">
+            <img src="images/galerie/blumen-herz.jpg" alt="Blumenherz, handgebunden" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Blumenherz</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="straeusse" data-visible="true">
+            <img src="images/galerie/urnenkranz.jpg" alt="Urnenkranz mit weißen Blumen" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Urnenkranz</div>
+            </div>
+          </div>
+          
+          <!-- Hochzeiten -->
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/strauss.jpg" alt="Brautstrauß in Rosé und Weiß" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Brautstrauß</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/dekoration.jpg" alt="Hochzeitstischdekoration" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Tischdekoration</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/kirche.jpg" alt="Kirchenschmuck mit Blumen" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Kirchenschmuck</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/bouquet.jpg" alt="Elegantes Hochzeitsbouquet" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Bouquet</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/kerze-vase.jpg" alt="Kerze und Vase Arrangement" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Arrangement</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/kirche-stuehle.jpg" alt="Blumenschmuck an Kirchenstühlen" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Stuhlschmuck</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/stuhl-blumen.jpg" alt="Blumen an Stuhlreihen" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Stuhlreihen</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/tisch-kerze.jpg" alt="Tischdekoration mit Kerze" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Tischschmuck</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/stuehle.jpg" alt="Dekorierte Stühle für Zeremonie" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Zeremonieschmuck</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/paar-strauss.jpg" alt="Brautpaar mit Blumenstrauß" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Brautpaar</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="hochzeiten" data-visible="true">
+            <img src="images/hochzeit/paar.jpg" alt="Glückliches Brautpaar" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Hochzeitsglück</div>
+            </div>
+          </div>
+          
+          <!-- Workshops -->
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/blumen.jpg" alt="Workshop Blumenarrangement" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Workshop</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/dekoration.jpg" alt="Kreative Workshop-Dekoration" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Dekoration</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/lehre.jpg" alt="Carina erklärt Floristik-Techniken" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Unterricht</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/kuerbisse.jpg" alt="Herbst-Workshop mit Kürbissen" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Herbst-Workshop</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/wein.jpg" alt="Blumen und Wein im Weingut" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Wein & Blumen</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/heinrichshof.jpg" alt="Workshop im Weingut Heinrichshof" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Weingut Heinrichshof</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/dekoration-tisch.jpg" alt="Tischdekoration im Workshop" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Tischdekoration</div>
+            </div>
+          </div>
+          
+          <div class="gallery-item" data-category="workshops" data-visible="true">
+            <img src="images/workshop/workshop.jpg" alt="Workshop-Teilnehmerinnen bei der Arbeit" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Teilnehmer</div>
+            </div>
+          </div>
+          
+          <!-- Events -->
+          <div class="gallery-item" data-category="events" data-visible="true">
+            <img src="images/galerie/feuerwehr.jpg" alt="Blumenschmuck auf Feuerwehrwagen" loading="lazy">
+            <div class="gallery-item-overlay">
+              <div class="gallery-item-title">Event-Schmuck</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ihre nächste Kreation?</h2>
+        <p>Lassen Sie sich von unseren Werken inspirieren. Kontaktieren Sie uns für Ihre ganz persönliche Floristik-Lösung.</p>
+        <a href="kontakt.html" class="cta-button">Zur Kontakt</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Blumen Werkstatt</h3>
+        <p>Ihre Floristin in Zeltingen-Rachtig an der Mosel für Blumenarrangements, Hochzeitsfloristik und Workshops.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Öffnungszeiten</h3>
+        <p>Mo.–Fr. 09:00–18:00 Uhr<br>Sa. 09:00–12:30 Uhr<br>So. Geschlossen</p>
+      </div>
+      <div class="footer-section">
+        <h3>Kontakt</h3>
+        <p>Telefon: <a href="tel:+491781361809">+49 178 1361809</a><br>
+           E-Mail: <a href="mailto:info@blumen-werkstatt.de">info@blumen-werkstatt.de</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Folge uns</h3>
+        <p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Blumen Werkstatt. Alle Rechte vorbehalten. | <a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+    </div>
+  </footer>
+  
+  <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Schreib uns auf WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371 0-.57 0-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.95 1.208L5 10.5l1.288-4.69a9.875 9.875 0 0115.33 8.612c0 5.487-4.462 9.95-9.95 9.95-1.65 0-3.261-.395-4.787-1.144l-.335-.16-3.468.823.844-3.067-.196-.314a9.875 9.875 0 011.516-16.78z"/>
+    </svg>
+  </a>
+  
+  <button class="back-to-top" aria-label="Nach oben scrollen">↑</button>
+  
+  <div class="mobile-cta-bar">
+    <a href="kontakt.html">Kontaktieren Sie uns</a>
+  </div>
+  
+  <script>
+    // Progress bar
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      document.querySelector('.progress-bar').style.width = scrollPercent + '%';
+    });
+    
+    // Back to top button
+    const backToTopBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Gallery filter functionality
+    const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filterValue = button.getAttribute('data-filter');
+        
+        // Filter items
+        galleryItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filterValue === 'all' || category === filterValue) {
+            item.classList.remove('hidden');
+            item.setAttribute('data-visible', 'true');
+          } else {
+            item.classList.add('hidden');
+            item.setAttribute('data-visible', 'false');
+          }
+        });
+      });
+    });
+    
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

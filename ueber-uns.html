@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<!-- Caveat for accent text -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Über uns · Floristin Carina Thiesen | Blumen Werkstatt Zeltingen-Rachtig</title>
+	<meta name="description" content="Lernen Sie Carina Thiesen kennen, die Floristin hinter der Blumen Werkstatt in Zeltingen-Rachtig. Mit Leidenschaft, Kreativität und einem Blick für das Besondere.">
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://blumen-werkstatt.de/ueber-uns.html">
+	
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Über uns · Floristin Carina Thiesen | Blumen Werkstatt">
+	<meta property="og:description" content="Lernen Sie Carina Thiesen kennen, die Floristin hinter der Blumen Werkstatt. Mit Leidenschaft für Handwerk und Kreativität.">
+	<meta property="og:url" content="https://blumen-werkstatt.de/ueber-uns.html">
+	<meta property="og:site_name" content="Blumen Werkstatt">
+	
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--primary: #2d5016;
+			--secondary: #8b7355;
+			--accent: #d4a574;
+			--light-bg: #faf9f6;
+			--text-dark: #2a2a2a;
+			--text-light: #6b6b6b;
+			--border: #e8e3db;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Lora', serif;
+			color: var(--text-dark);
+			background: var(--light-bg);
+			line-height: 1.6;
+			overflow-x: hidden;
+		}
+
+		body.has-whatsapp {
+			padding-bottom: 80px;
+		}
+
+		/* Grain texture overlay */
+		body::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Cfilter id="noise"%3E%3CfeTurbulence baseFrequency="0.9" numOctaves="4" result="noise"/%3E%3C/filter%3E%3Crect width="100" height="100" filter="url(%23noise)" opacity="0.03"/%3E%3C/svg%3E');
+			z-index: 9999;
+		}
+
+		/* Scroll progress bar */
+		.scroll-progress {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 3px;
+			background: linear-gradient(to right, var(--primary), var(--accent));
+			z-index: 10000;
+			width: 0%;
+		}
+
+		/* Skip link */
+		.skip-link {
+			position: absolute;
+			top: -40px;
+			left: 0;
+			background: var(--primary);
+			color: white;
+			padding: 8px 16px;
+			text-decoration: none;
+			z-index: 10001;
+		}
+
+		.skip-link:focus {
+			top: 0;
+		}
+
+		/* Header */
+		header {
+			background: white;
+			border-bottom: 1px solid var(--border);
+			position: sticky;
+			top: 0;
+			z-index: 100;
+		}
+
+		.header-inner {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 1.5rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.8rem;
+			font-weight: 600;
+			color: var(--primary);
+			text-decoration: none;
+			letter-spacing: -1px;
+		}
+
+		nav ul {
+			display: flex;
+			list-style: none;
+			gap: 2rem;
+			align-items: center;
+		}
+
+		nav a {
+			color: var(--text-dark);
+			text-decoration: none;
+			font-size: 0.95rem;
+			transition: color 0.3s ease;
+			position: relative;
+		}
+
+		nav a:hover {
+			color: var(--primary);
+		}
+
+		nav a.active {
+			color: var(--primary);
+			font-weight: 500;
+		}
+
+		nav a.active::after {
+			content: '';
+			position: absolute;
+			bottom: -8px;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: var(--primary);
+		}
+
+		@media (max-width: 768px) {
+			nav ul {
+				gap: 1rem;
+				font-size: 0.85rem;
+			}
+		}
+
+		/* Hero Section */
+		.hero {
+			background: linear-gradient(135deg, rgba(45, 80, 22, 0.08) 0%, rgba(139, 115, 85, 0.04) 100%);
+			padding: 4rem 1.5rem;
+			text-align: center;
+		}
+
+		.hero h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: 3rem;
+			color: var(--primary);
+			margin-bottom: 1rem;
+			letter-spacing: -1px;
+		}
+
+		.breadcrumbs {
+			display: flex;
+			justify-content: center;
+			gap: 0.5rem;
+			font-size: 0.9rem;
+			color: var(--text-light);
+		}
+
+		.breadcrumbs a {
+			color: var(--primary);
+			text-decoration: none;
+		}
+
+		.breadcrumbs a:hover {
+			text-decoration: underline;
+		}
+
+		/* Main content */
+		main {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 4rem 1.5rem;
+		}
+
+		/* About story grid - asymmetric */
+		.about-story-section {
+			display: grid;
+			grid-template-columns: 1fr 1.2fr;
+			gap: 4rem;
+			align-items: center;
+			margin-bottom: 6rem;
+			padding-bottom: 4rem;
+			border-bottom: 1px solid var(--border);
+		}
+
+		.about-story-section img {
+			width: 100%;
+			height: auto;
+			border-radius: 4px;
+			object-fit: cover;
+		}
+
+		.about-story {
+			line-height: 1.8;
+		}
+
+		.about-story h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
+			color: var(--primary);
+			margin-bottom: 1.5rem;
+			letter-spacing: -0.5px;
+		}
+
+		.about-story p {
+			margin-bottom: 1.5rem;
+			color: var(--text-dark);
+			font-size: 1.05rem;
+		}
+
+		.about-story p:last-of-type {
+			margin-bottom: 0;
+		}
+
+		.about-story strong {
+			color: var(--primary);
+			font-weight: 600;
+		}
+
+		/* Values grid */
+		.about-values {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 3rem;
+			margin-bottom: 6rem;
+			padding-bottom: 4rem;
+			border-bottom: 1px solid var(--border);
+		}
+
+		.value-card {
+			text-align: center;
+		}
+
+		.value-icon {
+			font-family: 'Playfair Display', serif;
+			font-size: 3rem;
+			color: var(--primary);
+			margin-bottom: 1rem;
+		}
+
+		.value-card h3 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			color: var(--primary);
+			margin-bottom: 1rem;
+			letter-spacing: -0.5px;
+		}
+
+		.value-card p {
+			color: var(--text-light);
+			line-height: 1.7;
+		}
+
+		/* Highlights section */
+		.highlights-section {
+			background: white;
+			padding: 3rem;
+			border-radius: 4px;
+			border: 1px solid var(--border);
+			margin-bottom: 6rem;
+			padding-bottom: 4rem;
+		}
+
+		.highlights-section h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
+			color: var(--primary);
+			margin-bottom: 2rem;
+			text-align: center;
+			letter-spacing: -0.5px;
+		}
+
+		.highlights-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+		}
+
+		.highlight-item {
+			padding-left: 2rem;
+			position: relative;
+		}
+
+		.highlight-item::before {
+			content: '✦';
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: var(--accent);
+			font-size: 1.5rem;
+		}
+
+		.highlight-item h4 {
+			font-family: 'Playfair Display', serif;
+			color: var(--primary);
+			margin-bottom: 0.5rem;
+			font-size: 1.1rem;
+		}
+
+		.highlight-item p {
+			color: var(--text-light);
+			font-size: 0.95rem;
+			line-height: 1.6;
+		}
+
+		/* Signature section */
+		.signature-section {
+			text-align: center;
+			padding: 3rem;
+			background: rgba(45, 80, 22, 0.03);
+			border-radius: 4px;
+			margin-bottom: 6rem;
+		}
+
+		.signature-image {
+			max-width: 200px;
+			height: auto;
+			margin: 0 auto 1.5rem;
+			display: block;
+		}
+
+		.signature-section p {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.3rem;
+			color: var(--primary);
+			margin: 0;
+		}
+
+		/* CTA Section */
+		.cta-section {
+			background: var(--primary);
+			color: white;
+			padding: 4rem 2rem;
+			text-align: center;
+			border-radius: 4px;
+			margin-bottom: 4rem;
+		}
+
+		.cta-section h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+			letter-spacing: -0.5px;
+		}
+
+		.cta-section p {
+			font-size: 1.1rem;
+			margin-bottom: 2rem;
+		}
+
+		.cta-button {
+			display: inline-block;
+			background: var(--accent);
+			color: var(--primary);
+			padding: 0.9rem 2.5rem;
+			text-decoration: none;
+			border-radius: 4px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			border: 2px solid var(--accent);
+			cursor: pointer;
+			font-size: 1rem;
+		}
+
+		.cta-button:hover {
+			background: transparent;
+			color: var(--accent);
+		}
+
+		/* Footer */
+		footer {
+			background: var(--text-dark);
+			color: #d4d4d4;
+			padding: 3rem 1.5rem;
+			margin-top: 6rem;
+		}
+
+		.footer-inner {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2rem;
+		}
+
+		.footer-column h4 {
+			color: white;
+			margin-bottom: 1rem;
+			font-size: 0.95rem;
+			font-family: 'Playfair Display', serif;
+		}
+
+		.footer-column p, .footer-column a {
+			font-size: 0.9rem;
+			color: #d4d4d4;
+			text-decoration: none;
+			line-height: 1.8;
+		}
+
+		.footer-column a:hover {
+			color: var(--accent);
+		}
+
+		.footer-bottom {
+			max-width: 1200px;
+			margin: 2rem auto 0;
+			padding-top: 2rem;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			text-align: center;
+			font-size: 0.85rem;
+		}
+
+		/* WhatsApp float button */
+		.whatsapp-float {
+			position: fixed;
+			bottom: 100px;
+			right: 20px;
+			width: 55px;
+			height: 55px;
+			background: #25d366;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			z-index: 999;
+			box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+			transition: all 0.3s ease;
+		}
+
+		.whatsapp-float:hover {
+			transform: scale(1.1);
+			box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+		}
+
+		.whatsapp-float svg {
+			width: 30px;
+			height: 30px;
+		}
+
+		/* Mobile CTA bar */
+		.mobile-cta {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: var(--primary);
+			padding: 1rem;
+			display: none;
+			z-index: 98;
+		}
+
+		.mobile-cta a {
+			display: block;
+			background: var(--accent);
+			color: var(--primary);
+			padding: 0.75rem 1.5rem;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 4px;
+			font-weight: 600;
+			font-size: 0.95rem;
+		}
+
+		/* Back to top */
+		.back-to-top {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 45px;
+			height: 45px;
+			background: var(--primary);
+			color: white;
+			border: none;
+			border-radius: 50%;
+			cursor: pointer;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			z-index: 997;
+			transition: all 0.3s ease;
+			font-size: 1.2rem;
+		}
+
+		.back-to-top:hover {
+			background: var(--secondary);
+		}
+
+		.back-to-top.show {
+			display: flex;
+		}
+
+		/* Lazy loading */
+		img[loading="lazy"] {
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		img[loading="lazy"].loaded {
+			opacity: 1;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.header-inner {
+				padding: 1rem;
+			}
+
+			nav ul {
+				gap: 0.8rem;
+			}
+
+			.hero h1 {
+				font-size: 2rem;
+			}
+
+			main {
+				padding: 2rem 1rem;
+			}
+
+			.about-story-section {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+
+			.about-values {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+
+			.highlights-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.footer-inner {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.mobile-cta {
+				display: block;
+			}
+
+			body.has-whatsapp {
+				padding-bottom: 120px;
+			}
+
+			.whatsapp-float {
+				bottom: 80px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.hero h1 {
+				font-size: 1.5rem;
+			}
+
+			.about-story h2 {
+				font-size: 1.5rem;
+			}
+
+			.highlights-section h2 {
+				font-size: 1.5rem;
+			}
+
+			.footer-inner {
+				grid-template-columns: 1fr;
+			}
+
+			nav ul {
+				gap: 0.4rem;
+				font-size: 0.75rem;
+			}
+		}
+	</style>
+</head>
+<body class="has-whatsapp">
+	<div class="scroll-progress"></div>
+	<a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
+	<header>
+		<div class="header-inner">
+			<a href="index.html" class="logo">Blumen Werkstatt</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Startseite</a></li>
+					<li><a href="leistungen.html">Leistungen</a></li>
+					<li><a href="hochzeiten.html">Hochzeiten</a></li>
+					<li><a href="workshops.html">Workshops</a></li>
+					<li><a href="ueber-uns.html" class="active">Über uns</a></li>
+					<li><a href="galerie.html">Galerie</a></li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="hero">
+		<h1>Über uns</h1>
+		<div class="breadcrumbs">
+			<a href="index.html">Startseite</a>
+			<span>/</span>
+			<span>Über uns</span>
+		</div>
+	</section>
+
+	<main id="main-content">
+		<!-- About Story Section -->
+		<section class="about-story-section">
+			<div>
+				<img src="images/workshop/lehre.jpg" alt="Carina Thiesen bei der Florengestaltung" loading="lazy">
+			</div>
+			<div class="about-story">
+				<h2>Carina Thiesen</h2>
+				<p>
+					Meine Leidenschaft für Blumen begann nicht an einem bestimmten Tag, sondern entwickelte sich über Jahre hinweg. <strong>Schon als Kind war ich fasziniert</strong> von der Vielfalt der Farben, der Düfte und der Geschichten, die jede Blüte erzählt.
+				</p>
+				<p>
+					Nach meiner Ausbildung zur Floristin sammelte ich umfangreiche Erfahrungen in verschiedenen Studios. Doch ich spürte schnell: Ich möchte mehr als nur Sträuße binden. <strong>Ich wollte einen Ort schaffen</strong>, an dem jede Blume mit Bedacht ausgewählt wird, an dem Kreativität und Handwerk Hand in Hand gehen.
+				</p>
+				<p>
+					Die <strong>Blumen Werkstatt in Zeltingen-Rachtig</strong> ist dieser Ort. Hier entstehen nicht nur Arrangements, sondern Momente – Momente, die Gefühle ausdrücken und Erinnerungen schaffen. Meine Devise: Jedes Arrangement erzählt eine Geschichte. Die Geschichte <span style="font-family: 'Caveat', cursive; font-size: 1.2em;">des Herzens</span>.
+				</p>
+				<p>
+					Ob für eine Hochzeit, einen runden Geburtstag, einen Trauertag oder einfach nur, weil jemand besonders ist – ich setze die Leidenschaft und Sorgfalt in jedes Werk, das meine Hände verlässt.
+				</p>
+			</div>
+		</section>
+
+		<!-- Values Section -->
+		<section class="about-values">
+			<div class="value-card">
+				<div class="value-icon">✿</div>
+				<h3>Handwerk</h3>
+				<p>Traditionelle Floristenkunst trifft auf moderne Ästhetik. Mit jeder Technik, die ich beherrsche, erschaffe ich zeitlose Kunstwerke.</p>
+			</div>
+			<div class="value-card">
+				<div class="value-icon">♡</div>
+				<h3>Persönlichkeit</h3>
+				<p>Jedes Arrangement ist ein Unikat, genau wie die Person, für die es geschaffen wird. Ihre Geschichte wird zur meine.</p>
+			</div>
+			<div class="value-card">
+				<div class="value-icon">🌿</div>
+				<h3>Regionalität</h3>
+				<p>Saisonale Blumen, lokale Partnerschaften – wir arbeiten mit Liebe zur Region und zur Natur zusammen.</p>
+			</div>
+		</section>
+
+		<!-- Highlights Section -->
+		<section class="highlights-section">
+			<h2>Was uns besonders macht</h2>
+			<div class="highlights-grid">
+				<div class="highlight-item">
+					<h4>Handgefertigte Einzelstücke</h4>
+					<p>Kein Arrangement ist wie das andere. Jedes wird speziell für Sie und Ihre Vision entworfen und gefertigt.</p>
+				</div>
+				<div class="highlight-item">
+					<h4>Beratung mit Herz</h4>
+					<p>Ich nehme mir Zeit, Ihre Wünsche zu verstehen. Gemeinsam finden wir die perfekte Ausdrucksform für Ihre Gefühle.</p>
+				</div>
+				<div class="highlight-item">
+					<h4>Frische garantiert</h4>
+					<p>Jede Blume wird frisch bezogen und mit größter Sorgfalt verarbeitet – für maximale Haltbarkeit und Schönheit.</p>
+				</div>
+				<div class="highlight-item">
+					<h4>Workshops & Kurse</h4>
+					<p>Mögen Sie selbst floristisch tätig werden? In meinen Workshops gebe ich Ihnen praktisches Wissen und handwerkliche Fähigkeiten weiter.</p>
+				</div>
+				<div class="highlight-item">
+					<h4>Hochzeiten & Events</h4>
+					<p>Von der Brautdekoration bis zur Trauzeremonie – ich realisiere Ihre Hochzeitsträume mit Blumen, die Ihre Vision perfekt widerspiegeln.</p>
+				</div>
+				<div class="highlight-item">
+					<h4>Nachhaltige Materialien</h4>
+					<p>Wo möglich arbeite ich mit ökologischen Verpackungen und setze auf Langlebigkeit statt Verschwendung.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Signature Section -->
+		<section class="signature-section">
+			<img src="images/signature.png" alt="Unterschrift von Carina Thiesen" class="signature-image" loading="lazy">
+			<p>Carina Thiesen, Inhaberin</p>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta-section">
+			<h2>Lust auf ein Gespräch?</h2>
+			<p>Lassen Sie uns über Ihre Blumenwünsche sprechen. Ich freue mich, Sie kennenzulernen.</p>
+			<a href="kontakt.html" class="cta-button">Kontakt aufnehmen</a>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer-inner">
+			<div class="footer-column">
+				<h4>Blumen Werkstatt</h4>
+				<p>Ihre Floristin in Zeltingen-Rachtig<br>
+				Mit Leidenschaft, Kreativität und Handwerk.</p>
+			</div>
+			<div class="footer-column">
+				<h4>Öffnungszeiten</h4>
+				<p>Montag–Freitag: 09:00–18:00 Uhr<br>
+				Samstag: 09:00–13:00 Uhr<br>
+				Sonntag: Geschlossen</p>
+			</div>
+			<div class="footer-column">
+				<h4>Kontakt</h4>
+				<p><a href="tel:+491781361809">+49 178 1361809</a><br>
+				<a href="mailto:carina@blumen-werkstatt.de">carina@blumen-werkstatt.de</a></p>
+			</div>
+			<div class="footer-column">
+				<h4>Navigation</h4>
+				<p><a href="index.html">Startseite</a><br>
+				<a href="leistungen.html">Leistungen</a><br>
+				<a href="hochzeiten.html">Hochzeiten</a><br>
+				<a href="workshops.html">Workshops</a><br>
+				<a href="galerie.html">Galerie</a><br>
+				<a href="kontakt.html">Kontakt</a></p>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2026 Blumen Werkstatt Carina Thiesen. Alle Rechte vorbehalten.</p>
+		</div>
+	</footer>
+
+	<!-- WhatsApp Float Button -->
+	<a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp kontaktieren">
+		<svg fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.952 1.263c-1.573.853-2.585 2.434-2.585 4.141 0 1.289.467 2.521 1.324 3.501.393.47.856.895 1.377 1.255.521.36 1.08.656 1.666.876.586.22 1.189.368 1.801.441 1.589.16 3.125-.31 4.294-1.319.585-.508 1.08-1.127 1.457-1.823.376-.695.59-1.467.62-2.263.006-.125.01-.248.01-.371 0-1.707-1.012-3.288-2.59-4.141-1.577-.853-3.375-1.136-5.014-.963m0 0c.132 0 .262.002.391.008 1.527.076 2.976.552 4.174 1.426 1.197.873 1.96 2.144 1.96 3.545 0 .208-.012.413-.036.616-.082 1.159-.49 2.232-1.13 3.108-.64.876-1.493 1.532-2.473 1.896-.98.364-2.056.492-3.118.37-1.062-.122-2.086-.475-2.985-1.037-.9-.562-1.656-1.323-2.204-2.22-.549-.897-.869-1.919-.869-3.054 0-1.366.63-2.644 1.681-3.509 1.052-.865 2.473-1.352 3.947-1.352z"/>
+		</svg>
+	</a>
+
+	<!-- Mobile CTA Bar -->
+	<div class="mobile-cta">
+		<a href="kontakt.html">Jetzt Kontakt</a>
+	</div>
+
+	<!-- Back to Top Button -->
+	<button class="back-to-top" aria-label="Nach oben scrollen">↑</button>
+
+	<script>
+		// Scroll progress bar
+		window.addEventListener('scroll', () => {
+			const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+			document.querySelector('.scroll-progress').style.width = scrolled + '%';
+		});
+
+		// Back to top button
+		const backToTopBtn = document.querySelector('.back-to-top');
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 300) {
+				backToTopBtn.classList.add('show');
+			} else {
+				backToTopBtn.classList.remove('show');
+			}
+		});
+
+		backToTopBtn.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+
+		// Lazy loading image callback
+		document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+			img.addEventListener('load', () => {
+				img.classList.add('loaded');
+			});
+		});
+	</script>
+
+	<!-- Schema.org Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "AboutPage",
+		"name": "Über uns - Blumen Werkstatt",
+		"description": "Erfahren Sie mehr über Carina Thiesen und die Blumen Werkstatt in Zeltingen-Rachtig",
+		"url": "https://blumen-werkstatt.de/ueber-uns.html"
+	}
+	</script>
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Carina Thiesen",
+		"jobTitle": "Floristin und Inhaberin",
+		"url": "https://blumen-werkstatt.de/ueber-uns.html",
+		"telephone": "+491781361809",
+		"email": "carina@blumen-werkstatt.de",
+		"description": "Carina Thiesen ist Floristin und Inhaberin der Blumen Werkstatt in Zeltingen-Rachtig. Mit Leidenschaft für Handwerk und Kreativität erschafft sie einzigartige Blumenerrangements.",
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Blumen Werkstatt",
+			"url": "https://blumen-werkstatt.de",
+			"telephone": "+491781361809",
+			"email": "carina@blumen-werkstatt.de",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Zeltingen-Rachtig",
+				"addressRegion": "DE",
+				"addressCountry": "DE"
+			}
+		}
+	}
+	</script>
+</body>
+</html>

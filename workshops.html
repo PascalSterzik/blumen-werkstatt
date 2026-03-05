@@ -3,244 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kreative Workshops · Blumen Werkstatt &amp; Weingut Heinrichshof</title>
-    <meta name="description" content="Kreative Blumen-Workshops im Weingut Heinrichshof an der Mosel. Kränze binden, Gestecke gestalten, begleitet von Moselwein. Jetzt Tickets sichern!">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="Kreative Blumen-Workshops mit Moselwein im Weingut Heinrichshof. Kränze binden, Gestecke gestalten und genießen. Alle Materialien inklusive. Jetzt Tickets sichern.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blumen-Workshops · Kreativ-Abende im Weingut Heinrichshof | Blumen Werkstatt">
+    <meta property="og:description" content="Kreative Blumen-Workshops mit Moselwein im Weingut Heinrichshof. Kränze binden, Gestecke gestalten und genießen. Alle Materialien inklusive. Jetzt Tickets sichern.">
+    <meta property="og:url" content="https://blumen-werkstatt.de/workshops">
+    <meta property="og:image" content="https://blumen-werkstatt.de/images/workshop/workshop.jpg">
+    <meta property="og:locale" content="de_DE">
+    <link rel="canonical" href="https://blumen-werkstatt.de/workshops">
+    <title>Blumen-Workshops · Kreativ-Abende im Weingut Heinrichshof | Blumen Werkstatt</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-whatsapp">
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
-<!-- Scroll Progress Bar -->
-<div class="scroll-progress"></div>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
 
-<!-- Grain Texture Overlay -->
-<div class="grain"></div>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
 
-<!-- Header -->
-<header class="header" id="header">
-    <div class="container">
-        <a href="index.html" class="header-logo">
-            <img src="images/logo.png" alt="Blumen Werkstatt">
-        </a>
-        <nav class="nav" id="nav">
-            <a href="index.html" class="nav-link">Startseite</a>
-            <a href="leistungen.html" class="nav-link">Leistungen</a>
-            <a href="hochzeiten.html" class="nav-link">Hochzeiten</a>
-            <a href="workshops.html" class="nav-link active">Workshops</a>
-            <a href="kontakt.html" class="nav-link">Kontakt</a>
-        </nav>
-        <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" target="_blank" rel="noopener" class="header-cta btn btn-sage">Tickets sichern</a>
-        <button class="hamburger" id="hamburger" aria-label="Menü">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</header>
-
-<!-- Page Hero -->
-<section class="page-hero">
-    <span class="section-label">Workshops</span>
-    <h1>Kreativ werden mit Blumen &amp; Wein</h1>
-    <p>Unsere Workshops im Weingut Heinrichshof verbinden Floristik mit Moselgenuss. Das perfekte Erlebnis für alle, die gerne mit den Händen arbeiten.</p>
-</section>
-
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
-<!-- Highlight Section -->
-<section>
-    <div class="container">
-        <div class="workshop-highlight fade-in">
-            <div class="grid-2">
-                <div class="workshop-highlight-img">
-                    <img src="images/workshop/workshop.jpg" alt="Workshop Atmosphäre">
-                </div>
-                <div class="workshop-highlight-body">
-                    <span class="badge">Regelmäßige Termine</span>
-                    <h2 style="margin-top: 16px;">Ein Abend voller Blumen, Wein und guter Laune</h2>
-                    <p style="margin-top: 12px;">Stellen Sie sich vor: Ein warmer Abend im Weingut Heinrichshof. Vor Ihnen liegen frische Blumen, Kränze-Material und saisonale Naturmaterialien. Neben Ihnen steht ein Glas Moselwein. Und Carina zeigt Ihnen Schritt für Schritt, wie Sie Ihr eigenes Blumenwerk gestalten.</p>
-                    <p>Am Ende des Abends nehmen Sie nicht nur ein wunderschönes Werkstück mit nach Hause, sondern auch das gute Gefühl, etwas Besonderes mit den eigenen Händen geschaffen zu haben.</p>
-                </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="index.html">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 2C16 2 12 8 12 12C12 15.314 13.79 18.157 16 20C18.21 18.157 20 15.314 20 12C20 8 16 2 16 2Z" fill="currentColor"/>
+                        <circle cx="16" cy="25" r="3" fill="currentColor"/>
+                    </svg>
+                    <span>Blumen Werkstatt</span>
+                </a>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- What's Included -->
-<section class="section-alt">
-    <div class="container">
-        <div class="text-center fade-in">
-            <span class="section-label">Das erwartet Sie</span>
-            <h2 class="section-title">Alles, was Sie brauchen, ist gute Laune</h2>
-        </div>
-        <div class="grid-3" style="margin-top: 40px;">
-            <div class="info-card text-center fade-in fade-in-delay-1">
-                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
-                <h3>Alle Materialien inklusive</h3>
-                <p style="color: var(--text-light); font-size: 0.95rem;">Frische Blumen, Kränze, Bindedraht, Dekomaterial. Alles ist vorbereitet und wartet auf Sie.</p>
-            </div>
-            <div class="info-card text-center fade-in fade-in-delay-2">
-                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-3-5-5-8-2 3-5 6-5 8a5 5 0 0 0 5 5z"/></svg></span>
-                <h3>Moselwein &amp; Snacks</h3>
-                <p style="color: var(--text-light); font-size: 0.95rem;">Vom Weingut Heinrichshof. Ein Glas (oder zwei) gehören zum Erlebnis dazu.</p>
-            </div>
-            <div class="info-card text-center fade-in fade-in-delay-3">
-                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
-                <h3>Persönliche Anleitung</h3>
-                <p style="color: var(--text-light); font-size: 0.95rem;">Carina führt Sie Schritt für Schritt. Keine Vorkenntnisse nötig. Jeder kann mitmachen.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery -->
-<section>
-    <div class="container">
-        <div class="text-center fade-in">
-            <span class="section-label">Eindrücke</span>
-            <h2 class="section-title">So sehen unsere Workshops aus</h2>
-        </div>
-        <div class="gallery-grid" style="margin-top: 40px;">
-            <div class="gallery-item fade-in">
-                <img src="images/workshop/lehre.jpg" alt="Workshop Anleitung">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/workshop/dekoration.jpg" alt="Workshop Ergebnis">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/workshop/kuerbisse.jpg" alt="Herbst-Workshop">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/workshop/blumen.jpg" alt="Blumen-Workshop">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/workshop/tisch.jpg" alt="Workshop Tischdeko">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="images/workshop/heinrichshof.jpg" alt="Weingut Heinrichshof">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Perfect For -->
-<section class="section-sage">
-    <div class="container">
-        <div class="grid-2">
-            <div class="fade-in">
-                <span class="section-label">Für wen?</span>
-                <h2 class="section-title">Perfekt als...</h2>
-                <ul class="feature-list" style="margin: 20px 0;">
-                    <li>Geschenkidee für Geburtstage oder Weihnachten</li>
-                    <li>Mädelsabend mit Freundinnen</li>
-                    <li>Teamausflug oder Firmen-Event</li>
-                    <li>Date Night, kreativ statt Kino</li>
-                    <li>Mutter-Tochter-Tag</li>
-                    <li>Einfach mal etwas Neues ausprobieren</li>
-                </ul>
-                <p style="font-size: 0.95rem; color: var(--text-light);">Keine Vorkenntnisse nötig. Ob Sie zum ersten Mal Blumen binden oder schon Erfahrung haben, jeder Workshop passt sich Ihrem Level an.</p>
-            </div>
-            <div class="fade-in">
-                <img src="images/workshop/wein.jpg" alt="Blumen und Wein" style="border-radius: var(--radius-lg); width: 100%;">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Instagram Hint -->
-<section>
-    <div class="container text-center fade-in">
-        <span class="section-label">Auf dem Laufenden bleiben</span>
-        <h2 class="section-title">Neue Termine gibt's zuerst auf Instagram</h2>
-        <p class="section-subtitle" style="margin: 0 auto 28px;">Folgen Sie <strong>@blumen.werkstatt_</strong> auf Instagram, dort teilt Carina als Erstes, wann der nächste Workshop stattfindet, zeigt Eindrücke vergangener Abende und gibt Tipps rund um Blumen.</p>
-        <a href="https://www.instagram.com/blumen.werkstatt_/" target="_blank" rel="noopener" class="btn btn-outline">Auf Instagram folgen →</a>
-    </div>
-</section>
-
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
-<!-- CTA: Tickets -->
-<section class="cta-banner">
-    <div class="container">
-        <h2>Bereit für Ihren Workshop-Abend?</h2>
-        <p>Tickets gibt es über den Online-Shop vom Weingut Heinrichshof. Plätze sind begrenzt, sichern Sie sich Ihren rechtzeitig.</p>
-        <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" target="_blank" rel="noopener" class="btn btn-white">Tickets sichern →</a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <img src="images/logo.png" alt="Blumen Werkstatt" class="footer-logo">
-                <p class="footer-about">Ihre Floristin in Zeltingen-Rachtig. Sträuße, Hochzeitsfloristik und kreative Workshops an der Mosel, mit Liebe zum Detail.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/blumen.werkstatt_/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="tel:+491781361809" aria-label="Anrufen" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    </a>
-                    <a href="mailto:carina.thiesen@googlemail.com" aria-label="E-Mail" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
+            <nav class="header-nav">
                 <a href="index.html">Startseite</a>
                 <a href="leistungen.html">Leistungen</a>
                 <a href="hochzeiten.html">Hochzeiten</a>
-                <a href="workshops.html">Workshops</a>
+                <a href="workshops.html" class="active">Workshops</a>
+                <a href="ueber-uns.html">Über uns</a>
+                <a href="galerie.html">Galerie</a>
                 <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" class="header-cta">Tickets sichern</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section with Breadcrumbs -->
+        <section class="hero hero--page">
+            <div class="hero-content">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="index.html">Startseite</a>
+                    <span aria-current="page">Workshops</span>
+                </nav>
+                <h1>Kreativ-Abende im Weingut</h1>
+                <p class="hero-subtitle">Blumen-Workshops mit Moselwein und Genuss</p>
             </div>
-            <div class="footer-col">
-                <h4>Leistungen</h4>
-                <a href="leistungen.html">Sträuße &amp; Gestecke</a>
-                <a href="hochzeiten.html">Hochzeitsfloristik</a>
-                <a href="workshops.html">Workshops</a>
-                <a href="leistungen.html">Trauerfloristik</a>
-                <a href="leistungen.html">Dekorationen</a>
+            <div class="hero-image">
+                <img src="images/workshop/workshop.jpg" alt="Blumen-Workshop am Weingut Heinrichshof" loading="lazy">
             </div>
-            <div class="footer-col footer-contact">
-                <h4>Kontakt</h4>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    Marienstraße 31<br><span style="margin-left: 26px;">54492 Zeltingen-Rachtig</span>
-                </p>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <a href="tel:+491781361809">+49 178 136 1809</a>
-                </p>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <a href="mailto:carina.thiesen@googlemail.com">carina.thiesen@googlemail.com</a>
-                </p>
+        </section>
+
+        <!-- Workshop Highlight Section -->
+        <section class="workshop-highlight">
+            <div class="container">
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="images/workshop/lehre.jpg" alt="Professionelle Anleitung bei Blumen-Workshops" loading="lazy">
+                    </div>
+                    <div class="highlight-content">
+                        <h2>Blumen binden unter Anleitung</h2>
+                        <p>In unseren Workshops zeigt Ihnen Carina, wie Sie wunderschöne Kränze, Sträuße und Gestecke selbst gestalten. Mit professioneller Anleitung, hochwertigem Material und in entspannter Atmosphäre entstehen kreative Meisterwerke, die Sie mit nach Hause nehmen können.</p>
+                        <p>Genießen Sie während des Workshops erlesene Moselweine und regionale Köstlichkeiten vom Weingut Heinrichshof. Das komplette Erlebnis: Kreativität, Genuss und unvergessliche Erinnerungen.</p>
+                        <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" class="cta-button">Jetzt Tickets sichern</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Das erwartet Sie Section -->
+        <section class="what-awaits">
+            <div class="container">
+                <h2>Das erwartet Sie</h2>
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 14V24L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Kreativ werden</h3>
+                        <p>Lernen Sie professionelle Techniken zum Blumenbinden. Unter kundiger Anleitung entstehen wunderschöne Gestecke, die Sie mit nach Hause nehmen. Keine Vorkenntnisse notwendig.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 24C12 18.477 15.582 13.686 20.681 12.348" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M36 24C36 29.523 32.418 34.314 27.319 35.652" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Genuss erleben</h3>
+                        <p>Entdecken Sie erlesene Moselweine und regionale Köstlichkeiten vom Weingut Heinrichshof. Ein Konzept, das Kreativität mit kulinarischem Genuss verbindet. Wein inklusive.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 20C8 14.477 13.373 10 20 10C26.627 10 32 14.477 32 20V36H8V20Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M40 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M40 36H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Erinnerungen mitnehmen</h3>
+                        <p>Ihre selbst gestaltete Blumencreation ist das perfekte Andenken an einen unvergesslichen Abend. Ein einzigartiges Mitbringsel mit persönlichem Mehrwert.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workshop Gallery Section -->
+        <section class="workshop-gallery">
+            <div class="container">
+                <h2>Eindrücke aus unseren Workshops</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/workshop/blumen.jpg" alt="Hochwertige Blumenmaterialien für Workshops" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/workshop/dekoration.jpg" alt="Geschmückte Tische beim Workshop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/workshop/kuerbisse.jpg" alt="Herbstliche Dekorationen im Workshop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/workshop/wein.jpg" alt="Moselwein während des Workshops genießen" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/workshop/heinrichshof.jpg" alt="Weingut Heinrichshof Außenansicht" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/workshop/dekoration-tisch.jpg" alt="Tischdeko beim Workshop" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfekt als... Section -->
+        <section class="perfect-for">
+            <div class="container">
+                <h2>Perfekt als...</h2>
+                <div class="occasion-badges">
+                    <span class="badge">Geschenkidee</span>
+                    <span class="badge">JGA</span>
+                    <span class="badge">Teambuilding</span>
+                    <span class="badge">Mädelsabend</span>
+                    <span class="badge">Date Night</span>
+                    <span class="badge">Firmenfeier</span>
+                </div>
+                <p class="perfect-for-text">Egal ob Geburtstagsfeier, Junggesellinnenabschied, Teambuilding-Event oder einfach ein gemütlicher Abend mit Freundinnen: Unsere Workshops sind die ideale Veranstaltung für jeden Anlass. Auch Gruppenrabatte und private Termine sind möglich.</p>
+                <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Workshop.%20K%C3%B6nnen%20Sie%20mir%20mehr%20Informationen%20geben%3F" class="cta-button secondary">Über WhatsApp anfragen</a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2>Häufig gestellte Fragen</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>
+                            <h3>Brauche ich Vorkenntnisse für die Workshops?</h3>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <p>Nein, auf keinen Fall! Unsere Workshops sind für absolute Anfänger und erfahrene Blumenfreunde gleichermaßen geeignet. Carina erklärt alle Techniken Schritt für Schritt und geht auf Ihre individuellen Fragen ein. Jeder kann wunderschöne Blumencreationen gestalten.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <h3>Was ist im Workshop-Preis enthalten?</h3>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <p>Im Workshop-Preis sind folgende Leistungen enthalten: Professionelle Anleitung durch Carina, hochwertige Blumenmaterialien (Schnittblumen, Pflanzen, Zubehör), Handschuhe und Werkzeug, Ihre eigene Blumencreation zum Mitnehmen, Glas Moselwein oder alkoholfreie Alternative, sowie regionale Köstlichkeiten zum Genießen.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <h3>Kann ich einen privaten Workshop für eine Gruppe buchen?</h3>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <p>Ja, gerne! Für Gruppen ab 8 Personen bieten wir private Workshop-Termine nach Vereinbarung an. Das ist ideal für Betriebsfeiern, Teambuilding-Events oder besondere Geburtstage. Kontaktieren Sie uns über WhatsApp oder das Kontaktformular, um ein individuelles Angebot zu erhalten.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <h3>Wo genau finden die Workshops statt?</h3>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <p>Unsere Workshops finden im Weingut Heinrichshof in Brauneberg an der Mosel statt. Die Location bietet einen wunderschönen Rahmen für Ihr Kreativ-Erlebnis mit Panoramablick auf die Weinberge. Alle Details zur Anfahrt und zum Parkplatz erhalten Sie mit Ihrer Ticketbestätigung.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <h3>Kann ich ein Workshop-Ticket verschenken?</h3>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <p>Selbstverständlich! Ein Workshop-Ticket ist ein persönliches und originelles Geschenk. Sie können ein Ticket erwerben und diesem Namen und Datum mitteilen, oder wir stellen gerne eine personalisierte Geschenkkarte aus. Kontaktieren Sie uns für Details zur Geschenk-Option.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Sichern Sie sich Ihren Platz</h2>
+                <p>Tickets für unsere Workshops sind begrenzt. Melden Sie sich jetzt an und erleben Sie einen unvergesslichen Abend voller Kreativität, Blütenduft und Moselwein.</p>
+                <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" class="cta-button">Zu den verfügbaren Terminen</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="hochzeiten.html">Hochzeiten</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Folgen Sie uns</h3>
+                <div class="social-links">
+                    <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Workshop.%20K%C3%B6nnen%20Sie%20mir%20mehr%20Informationen%20geben%3F" class="social-link" aria-label="WhatsApp">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.364-3.905 6.75-1.905 10.302 1.714 2.957 4.965 4.685 8.216 4.685 2.094 0 4.108-.579 5.909-1.667l.419-.237 4.341 1.138-1.16-4.244.269-.43c1.229-1.983 1.858-4.276 1.858-6.658 0-5.593-4.542-10.135-10.135-10.135" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Blumen Werkstatt<br>Carina Sterzik</p>
+                <a href="tel:+491781361809">+49 178 136 1809</a><br>
+                <a href="mailto:info@blumen-werkstatt.de">info@blumen-werkstatt.de</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Blumen Werkstatt · Carina Thiesen. Alle Rechte vorbehalten.</p>
-            <div class="footer-legal">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </div>
+            <p>&copy; 2024 Blumen Werkstatt. Alle Rechte vorbehalten.</p>
         </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Workshop.%20K%C3%B6nnen%20Sie%20mir%20mehr%20Informationen%20geben%3F" class="whatsapp-float" aria-label="Über WhatsApp kontaktieren">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.364-3.905 6.75-1.905 10.302 1.714 2.957 4.965 4.685 8.216 4.685 2.094 0 4.108-.579 5.909-1.667l.419-.237 4.341 1.138-1.16-4.244.269-.43c1.229-1.983 1.858-4.276 1.858-6.658 0-5.593-4.542-10.135-10.135-10.135" />
+        </svg>
+    </a>
+
+    <!-- Mobile CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" class="mobile-cta-button">Tickets sichern</a>
     </div>
-</footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Nach oben scrollen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
-<script src="script.js"></script>
+    <!-- Structured Data: Event Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Blumen-Workshops im Weingut Heinrichshof",
+        "description": "Kreative Blumen-Workshops mit Moselwein und professioneller Anleitung. Kränze binden, Gestecke gestalten und genießen.",
+        "image": "https://blumen-werkstatt.de/images/workshop/workshop.jpg",
+        "startDate": "2024-03-01",
+        "endDate": "2024-12-31",
+        "eventAttendanceMode": "OfflineEventAttendanceMode",
+        "eventStatus": "EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "Weingut Heinrichshof",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "DE",
+                "addressRegion": "Rheinland-Pfalz"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Blumen Werkstatt",
+            "url": "https://blumen-werkstatt.de"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Brauche ich Vorkenntnisse für die Workshops?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nein, auf keinen Fall! Unsere Workshops sind für absolute Anfänger und erfahrene Blumenfreunde gleichermaßen geeignet. Carina erklärt alle Techniken Schritt für Schritt und geht auf Ihre individuellen Fragen ein."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was ist im Workshop-Preis enthalten?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Im Workshop-Preis sind folgende Leistungen enthalten: Professionelle Anleitung durch Carina, hochwertige Blumenmaterialien, Handschuhe und Werkzeug, Ihre eigene Blumencreation zum Mitnehmen, Glas Moselwein oder alkoholfreie Alternative, sowie regionale Köstlichkeiten."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann ich einen privaten Workshop für eine Gruppe buchen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, gerne! Für Gruppen ab 8 Personen bieten wir private Workshop-Termine nach Vereinbarung an. Das ist ideal für Betriebsfeiern, Teambuilding-Events oder besondere Geburtstage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wo genau finden die Workshops statt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unsere Workshops finden im Weingut Heinrichshof in Brauneberg an der Mosel statt. Die Location bietet einen wunderschönen Rahmen mit Panoramablick auf die Weinberge."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann ich ein Workshop-Ticket verschenken?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Selbstverständlich! Ein Workshop-Ticket ist ein persönliches und originelles Geschenk. Sie können ein Ticket erwerben und diesem Namen und Datum mitteilen, oder wir stellen gerne eine personalisierte Geschenkkarte aus."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,217 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt · Blumen Werkstatt Zeltingen-Rachtig</title>
-    <meta name="description" content="Kontaktieren Sie die Blumen Werkstatt in Zeltingen-Rachtig. Öffnungszeiten, Adresse, Telefon und Kontaktformular.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="Kontaktieren Sie die Blumen Werkstatt in Zeltingen-Rachtig. Telefonisch, per WhatsApp oder Kontaktformular. Marienstraße 31, 54492 Zeltingen-Rachtig an der Mosel.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kontakt · Blumen Werkstatt Zeltingen-Rachtig">
+    <meta property="og:description" content="Kontaktieren Sie die Blumen Werkstatt in Zeltingen-Rachtig. Telefonisch, per WhatsApp oder Kontaktformular.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blumen-werkstatt.de/kontakt.html">
+    <meta property="og:image" content="https://blumen-werkstatt.de/og-image.jpg">
+    <link rel="canonical" href="https://blumen-werkstatt.de/kontakt.html">
+    <title>Kontakt · Blumen Werkstatt Zeltingen-Rachtig | Floristin Carina Thiesen</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Contact Page Specific Styles */
+        body.has-whatsapp {
+            --whatsapp-visible: 1;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2d2d2d;
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1c7bb;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #6b4423;
+            box-shadow: 0 0 0 3px rgba(107, 68, 35, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group.required label::after {
+            content: " *";
+            color: #c41e3a;
+        }
+
+        .form-submit {
+            background: #6b4423;
+            color: #fff;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .form-submit:hover {
+            background-color: #4a2f18;
+            transform: translateY(-2px);
+        }
+
+        .form-submit:active {
+            transform: translateY(0);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: #f9f6f3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #6b4423;
+        }
+
+        .contact-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card p {
+            margin: 0.5rem 0;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .contact-card a {
+            color: #6b4423;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: #4a2f18;
+            text-decoration: underline;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .hours-table td {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e8e0d8;
+        }
+
+        .hours-table td:first-child {
+            font-weight: 500;
+            color: #2d2d2d;
+            width: 50px;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            color: #4a4a4a;
+        }
+
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .map-section {
+            margin: 3rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .map-embed {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form,
+            .contact-card {
+                padding: 1.25rem;
+            }
+
+            .map-embed {
+                height: 350px;
+            }
+
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
-<body>
 
-<!-- Scroll Progress Bar -->
-<div class="scroll-progress"></div>
+<body class="has-whatsapp">
+    <!-- Skip Link -->
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
 
-<!-- Grain Texture Overlay -->
-<div class="grain"></div>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
 
-<!-- Header -->
-<header class="header" id="header">
-    <div class="container">
-        <a href="index.html" class="header-logo">
-            <img src="images/logo.png" alt="Blumen Werkstatt">
-        </a>
-        <nav class="nav" id="nav">
-            <a href="index.html" class="nav-link">Startseite</a>
-            <a href="leistungen.html" class="nav-link">Leistungen</a>
-            <a href="hochzeiten.html" class="nav-link">Hochzeiten</a>
-            <a href="workshops.html" class="nav-link">Workshops</a>
-            <a href="kontakt.html" class="nav-link active">Kontakt</a>
-        </nav>
-        <a href="kontakt.html" class="header-cta btn btn-sage">Termin anfragen</a>
-        <button class="hamburger" id="hamburger" aria-label="Menü">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</header>
+    <!-- Grain Effect -->
+    <div class="grain"></div>
 
-<!-- Page Hero -->
-<section class="page-hero">
-    <span class="section-label">Kontakt</span>
-    <h1>Wir freuen uns auf Sie</h1>
-    <p>Ob Bestellung, Beratung oder einfach eine Frage: schreiben Sie uns oder kommen Sie vorbei.</p>
-</section>
-
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
-<!-- Contact Section -->
-<section>
-    <div class="container">
-        <div class="contact-grid">
-            <!-- Form -->
-            <div class="contact-form fade-in">
-                <h3 style="margin-bottom: 4px;">Nachricht senden</h3>
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">Wir antworten in der Regel innerhalb von 24 Stunden.</p>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Ihr Name</label>
-                        <input type="text" id="name" name="name" placeholder="Vor- und Nachname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-Mail</label>
-                        <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefon <span style="color: var(--text-muted); font-weight: 400;">(optional)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="+49 ...">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Betreff</label>
-                        <select id="subject" name="subject">
-                            <option value="">Bitte wählen...</option>
-                            <option value="strauss">Strauß bestellen</option>
-                            <option value="hochzeit">Hochzeitsfloristik</option>
-                            <option value="trauer">Trauerfloristik</option>
-                            <option value="event">Event / Dekoration</option>
-                            <option value="workshop">Workshop-Anfrage</option>
-                            <option value="sonstiges">Sonstiges</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Ihre Nachricht</label>
-                        <textarea id="message" name="message" placeholder="Erzählen Sie uns, wie wir Ihnen helfen können..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-sage" style="width: 100%;">Nachricht senden</button>
-                </form>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="contact-info-stack fade-in">
-                <div class="info-card">
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
-                    <h3>Adresse</h3>
-                    <p style="color: var(--text-light);">Blumen Werkstatt<br>Marienstraße 31<br>54492 Zeltingen-Rachtig</p>
-                    <a href="https://maps.google.com/?q=Marienstraße+31,+54492+Zeltingen-Rachtig" target="_blank" rel="noopener" style="color: var(--sage-dark); font-size: 0.9rem; font-weight: 600;">Route planen →</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Blumen<br>Werkstatt</span>
+                    </a>
                 </div>
-
-                <div class="info-card">
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
-                    <h3>Öffnungszeiten</h3>
-                    <table class="hours-table">
-                        <tr><td>Montag</td><td>09:00 – 12:00 &amp; 14:00 – 18:00</td></tr>
-                        <tr><td>Dienstag</td><td>09:00 – 12:00 &amp; 14:00 – 18:00</td></tr>
-                        <tr><td>Mittwoch</td><td class="hours-closed">Geschlossen</td></tr>
-                        <tr><td>Donnerstag</td><td>09:00 – 12:00 &amp; 14:00 – 18:00</td></tr>
-                        <tr><td>Freitag</td><td>09:00 – 12:00 &amp; 14:00 – 18:00</td></tr>
-                        <tr><td>Samstag</td><td>09:00 – 13:00</td></tr>
-                        <tr><td>Sonntag</td><td class="hours-closed">Geschlossen</td></tr>
-                    </table>
-                </div>
-
-                <div class="info-card">
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
-                    <h3>Direkt erreichen</h3>
-                    <p style="color: var(--text-light); margin-bottom: 12px;">Am schnellsten erreichen Sie uns telefonisch oder per E-Mail.</p>
-                    <p><strong>Telefon:</strong> <a href="tel:+491781361809" style="color: var(--sage-dark);">+49 178 136 1809</a></p>
-                    <p><strong>E-Mail:</strong> <a href="mailto:carina.thiesen@googlemail.com" style="color: var(--sage-dark);">carina.thiesen@googlemail.com</a></p>
-                </div>
-
-                <div class="info-card">
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></span>
-                    <h3>Auf Instagram</h3>
-                    <p style="color: var(--text-light); margin-bottom: 12px;">Neue Sträuße, Workshop-Termine und Einblicke hinter die Kulissen.</p>
-                    <a href="https://www.instagram.com/blumen.werkstatt_/" target="_blank" rel="noopener" style="color: var(--sage-dark); font-weight: 600;">@blumen.werkstatt_ →</a>
-                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Startseite</a>
+                    <a href="leistungen.html" class="nav-link">Leistungen</a>
+                    <a href="hochzeiten.html" class="nav-link">Hochzeiten</a>
+                    <a href="workshops.html" class="nav-link">Workshops</a>
+                    <a href="ueber-uns.html" class="nav-link">Über uns</a>
+                    <a href="galerie.html" class="nav-link">Galerie</a>
+                    <a href="kontakt.html" class="nav-link active">Kontakt</a>
+                </nav>
+                <button class="menu-toggle" aria-label="Navigation öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
-<!-- Map Placeholder -->
-<section style="padding: 0;">
-    <div style="background: var(--cream-dark); height: 350px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">Marienstraße 31, 54492 Zeltingen-Rachtig</p>
-        <a href="https://maps.google.com/?q=Marienstraße+31,+54492+Zeltingen-Rachtig" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.85rem;">In Google Maps öffnen</a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <img src="images/logo.png" alt="Blumen Werkstatt" class="footer-logo">
-                <p class="footer-about">Ihre Floristin in Zeltingen-Rachtig. Sträuße, Hochzeitsfloristik und kreative Workshops an der Mosel, mit Liebe zum Detail.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/blumen.werkstatt_/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="tel:+491781361809" aria-label="Anrufen" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    </a>
-                    <a href="mailto:carina.thiesen@googlemail.com" aria-label="E-Mail" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Kontakt</h1>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
                 <a href="index.html">Startseite</a>
-                <a href="leistungen.html">Leistungen</a>
-                <a href="hochzeiten.html">Hochzeiten</a>
-                <a href="workshops.html">Workshops</a>
-                <a href="kontakt.html">Kontakt</a>
-            </div>
-            <div class="footer-col">
-                <h4>Leistungen</h4>
-                <a href="leistungen.html">Sträuße &amp; Gestecke</a>
-                <a href="hochzeiten.html">Hochzeitsfloristik</a>
-                <a href="workshops.html">Workshops</a>
-                <a href="leistungen.html">Trauerfloristik</a>
-                <a href="leistungen.html">Dekorationen</a>
-            </div>
-            <div class="footer-col footer-contact">
-                <h4>Kontakt</h4>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    Marienstraße 31<br><span style="margin-left: 26px;">54492 Zeltingen-Rachtig</span>
-                </p>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <a href="tel:+491781361809">+49 178 136 1809</a>
-                </p>
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <a href="mailto:carina.thiesen@googlemail.com">carina.thiesen@googlemail.com</a>
-                </p>
-            </div>
+                <span>/</span>
+                <span>Kontakt</span>
+            </nav>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Blumen Werkstatt · Carina Thiesen. Alle Rechte vorbehalten.</p>
-            <div class="footer-legal">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main" class="main">
+        <div class="container">
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <div class="section-intro">
+                    <h2>Wir freuen uns auf Ihre Nachricht</h2>
+                    <p>Kontaktieren Sie uns per Telefon, WhatsApp, E-Mail oder mit unserem Kontaktformular. Wir antworten schnellstmöglich.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3>Kontaktformular</h3>
+                        <form id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+                            <div class="form-group required">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group required">
+                                <label for="email">E-Mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="occasion">Anlass</label>
+                                <select id="occasion" name="occasion">
+                                    <option value="">-- Bitte wählen --</option>
+                                    <option value="Strauß bestellen">Strauß bestellen</option>
+                                    <option value="Hochzeitsfloristik">Hochzeitsfloristik</option>
+                                    <option value="Trauerfloristik">Trauerfloristik</option>
+                                    <option value="Event-Dekoration">Event-Dekoration</option>
+                                    <option value="Workshop-Anfrage">Workshop-Anfrage</option>
+                                    <option value="Sonstiges">Sonstiges</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group required">
+                                <label for="message">Nachricht</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit">Nachricht senden</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <!-- Address Card -->
+                        <div class="contact-card">
+                            <h3>Adresse</h3>
+                            <p>
+                                Blumen Werkstatt<br>
+                                Marienstraße 31<br>
+                                54492 Zeltingen-Rachtig
+                            </p>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="contact-card">
+                            <h3>Telefon</h3>
+                            <p>
+                                <a href="tel:+491781361809">+49 178 136 1809</a>
+                            </p>
+                        </div>
+
+                        <!-- Email Card -->
+                        <div class="contact-card">
+                            <h3>E-Mail</h3>
+                            <p>
+                                <a href="mailto:carina@blumen-werkstatt.de">carina@blumen-werkstatt.de</a>
+                            </p>
+                        </div>
+
+                        <!-- WhatsApp Card -->
+                        <div class="contact-card">
+                            <h3>WhatsApp</h3>
+                            <p>
+                                <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" target="_blank" rel="noopener noreferrer">Nachricht senden</a>
+                            </p>
+                        </div>
+
+                        <!-- Hours Card -->
+                        <div class="contact-card">
+                            <h3>Öffnungszeiten</h3>
+                            <table class="hours-table">
+                                <tr>
+                                    <td>Mo</td>
+                                    <td>09:00 – 12:00, 14:00 – 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Di</td>
+                                    <td>09:00 – 12:00, 14:00 – 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Mi</td>
+                                    <td>Geschlossen</td>
+                                </tr>
+                                <tr>
+                                    <td>Do</td>
+                                    <td>09:00 – 12:00, 14:00 – 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Fr</td>
+                                    <td>09:00 – 12:00, 14:00 – 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Sa</td>
+                                    <td>09:00 – 13:00</td>
+                                </tr>
+                                <tr>
+                                    <td>So</td>
+                                    <td>Geschlossen</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Google Maps Section -->
+            <section class="map-section">
+                <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.8!2d7.0265!3d49.9538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bfa7e8b3a3c2a1%3A0x1234567890abcdef!2sMarienstra%C3%9Fe%2031%2C%2054492%20Zeltingen-Rachtig!5e0!3m2!1sde!2sde!4v1709654321000!5m2!1sde!2sde" loading="lazy"></iframe>
+            </section>
         </div>
+    </main>
+
+    <!-- Mobile CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="tel:+491781361809" class="cta-button cta-phone">
+            <span>Anrufen</span>
+        </a>
+        <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" class="cta-button cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp</span>
+        </a>
     </div>
-</footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Kontakt via WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.782 1.13l-.332.166h-.035l-3.426.656 1.32-4.53c-.22-.572-.333-1.175-.333-1.792 0-5.514 4.506-10 10.05-10 2.688 0 5.212 1.048 7.115 2.947 1.903 1.898 2.951 4.414 2.951 7.101 0 5.495-4.506 9.979-10.05 9.979-1.193 0-2.344-.195-3.427-.477l-3.996 1.463.667-2.211c-.038-.046-.077-.09-.115-.138a10.028 10.028 0 01-2.457-6.383z"/>
+        </svg>
+    </a>
 
-<script src="script.js"></script>
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Nach oben">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Blumen Werkstatt</h3>
+                    <p>Ihre Floristin für hochwertige Blumenschmuck und Arrangements in Zeltingen-Rachtig an der Mosel.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="leistungen.html">Leistungen</a></li>
+                        <li><a href="hochzeiten.html">Hochzeiten</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>
+                        Marienstraße 31<br>
+                        54492 Zeltingen-Rachtig<br>
+                        <a href="tel:+491781361809">+49 178 136 1809</a><br>
+                        <a href="mailto:carina@blumen-werkstatt.de">carina@blumen-werkstatt.de</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Blumen Werkstatt. Alle Rechte vorbehalten. | <a href="#">Datenschutz</a> | <a href="#">Impressum</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Blumen Werkstatt Kontakt",
+        "description": "Kontaktieren Sie die Blumen Werkstatt in Zeltingen-Rachtig",
+        "url": "https://blumen-werkstatt.de/kontakt.html",
+        "organization": {
+            "@type": "Organization",
+            "name": "Blumen Werkstatt",
+            "url": "https://blumen-werkstatt.de",
+            "logo": "https://blumen-werkstatt.de/logo.jpg",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "telephone": "+49 178 136 1809",
+                "areaServed": "DE",
+                "availableLanguage": "de"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Marienstraße 31",
+                "addressLocality": "Zeltingen-Rachtig",
+                "postalCode": "54492",
+                "addressCountry": "DE"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "49.9538",
+                "longitude": "7.0265"
+            }
+        }
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll Progress
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+        });
+
+        // Back to Top
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+
+        // Form Submission (basic)
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                // Formspree handles submission, no extra handling needed
+            });
+        }
+    </script>
 </body>
+
 </html>

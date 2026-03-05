@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blumen Werkstatt · Floristik, Hochzeiten & Workshops in Zeltingen-Rachtig</title>
-    <meta name="description" content="Blumen Werkstatt von Carina Thiesen in Zeltingen-Rachtig an der Mosel. Sträuße, Hochzeitsfloristik, kreative Workshops und mehr, mit Liebe zum Detail.">
-    <meta name="keywords" content="Floristik Zeltingen-Rachtig, Blumen Mosel, Hochzeitsfloristik, Brautstrauß, Blumen-Workshops, Trauerfloristik, Blumen Werkstatt, Carina Thiesen">
+    <meta name="description" content="Ihre Floristin an der Mosel: handgebundene Sträuße, individuelle Hochzeitsfloristik und kreative Workshops im Weingut Heinrichshof. Blumen Werkstatt von Carina Thiesen in Zeltingen-Rachtig.">
+    <meta name="keywords" content="Florist Zeltingen-Rachtig, Blumenladen Mosel, Hochzeitsfloristik Mosel, Brautstrauß Bernkastel-Kues, Blumen-Workshop Weingut, Trauerfloristik, Floristin Carina Thiesen">
     <meta name="author" content="Blumen Werkstatt · Carina Thiesen">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://blumen-werkstatt.vercel.app/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Blumen Werkstatt · Floristik, Hochzeiten & Workshops">
-    <meta property="og:description" content="Ihre Floristin in Zeltingen-Rachtig an der Mosel. Sträuße, Hochzeitsfloristik und kreative Workshops, mit Liebe zum Detail.">
+    <meta property="og:title" content="Blumen Werkstatt · Ihre Floristin an der Mosel">
+    <meta property="og:description" content="Handgebundene Sträuße, Hochzeitsfloristik und kreative Workshops in Zeltingen-Rachtig. Floristik mit Herz von Carina Thiesen.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://blumen-werkstatt.vercel.app/">
     <meta property="og:image" content="https://blumen-werkstatt.vercel.app/images/hero/shop.jpg">
@@ -23,12 +23,16 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="images/hero/shop.jpg">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Schema.org LocalBusiness -->
+    <!-- Schema.org: LocalBusiness (Florist) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -59,7 +63,7 @@
             {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00"}
         ],
         "sameAs": ["https://www.instagram.com/blumen.werkstatt_/"],
-        "description": "Floristin in Zeltingen-Rachtig an der Mosel. Sträuße, Hochzeitsfloristik, Trauerfloristik und kreative Blumen-Workshops im Weingut Heinrichshof.",
+        "description": "Floristin in Zeltingen-Rachtig an der Mosel. Handgebundene Sträuße, individuelle Hochzeitsfloristik, einfühlsame Trauerfloristik und kreative Blumen-Workshops im Weingut Heinrichshof.",
         "priceRange": "€€",
         "areaServed": {
             "@type": "GeoCircle",
@@ -70,11 +74,11 @@
             "@type": "OfferCatalog",
             "name": "Unsere Leistungen",
             "itemListElement": [
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sträuße & Gestecke"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hochzeitsfloristik"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Trauerfloristik"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dekorationen & Events"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kreative Workshops"}}
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sträuße & Gestecke", "description": "Handgebundene Sträuße für jeden Anlass"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hochzeitsfloristik", "description": "Brautstrauß, Kirchenschmuck und Tischdekoration"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Trauerfloristik", "description": "Einfühlsame Trauergestecke und Kränze"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dekorationen & Events", "description": "Florale Dekorationen für Veranstaltungen"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kreative Workshops", "description": "Blumen-Workshops im Weingut Heinrichshof"}}
             ]
         },
         "aggregateRating": {
@@ -85,8 +89,61 @@
         }
     }
     </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Welche Leistungen bietet die Blumen Werkstatt an?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wir bieten handgebundene Sträuße für jeden Anlass, individuelle Hochzeitsfloristik (Brautstrauß, Kirchenschmuck, Tischdekoration), einfühlsame Trauerfloristik, florale Dekorationen für Events und kreative Workshops im Weingut Heinrichshof an der Mosel."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wo befindet sich die Blumen Werkstatt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Blumen Werkstatt von Carina Thiesen befindet sich in der Marienstraße 31, 54492 Zeltingen-Rachtig an der Mosel. Wir beliefern auch die umliegenden Orte wie Bernkastel-Kues, Traben-Trarbach, Wittlich und die gesamte Moselregion."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wann hat die Blumen Werkstatt geöffnet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Montag bis Freitag: 09:00–12:00 und 14:00–18:00 Uhr (Mittwoch geschlossen). Samstag: 09:00–13:00 Uhr. Termine nach Vereinbarung sind auch außerhalb der Öffnungszeiten möglich."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann ich Blumen auch kurzfristig bestellen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, wir binden Sträuße auch spontan und frisch. Für besondere Anlässe wie Hochzeiten oder größere Events empfehlen wir eine Beratung mindestens 4–6 Wochen im Voraus. Rufen Sie uns einfach an oder schreiben Sie uns per WhatsApp."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie kann ich einen Workshop buchen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unsere Workshops finden regelmäßig im Weingut Heinrichshof in Zeltingen-Rachtig statt. Tickets können direkt über den Online-Shop des Weinguts gebucht werden. Alle Materialien, Moselwein und kleine Snacks sind im Preis enthalten."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
-<body>
+<body class="has-whatsapp">
+
+<!-- Skip to content -->
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
 
 <!-- Scroll Progress Bar -->
 <div class="scroll-progress"></div>
@@ -98,44 +155,41 @@
 <header class="header" id="header">
     <div class="container">
         <a href="index.html" class="header-logo">
-            <img src="images/logo.png" alt="Blumen Werkstatt">
+            <img src="images/logo.png" alt="Blumen Werkstatt" width="52" height="52">
         </a>
-        <nav class="nav" id="nav">
+        <nav class="nav" id="nav" aria-label="Hauptnavigation">
             <a href="index.html" class="nav-link active">Startseite</a>
             <a href="leistungen.html" class="nav-link">Leistungen</a>
             <a href="hochzeiten.html" class="nav-link">Hochzeiten</a>
             <a href="workshops.html" class="nav-link">Workshops</a>
+            <a href="ueber-uns.html" class="nav-link">Über uns</a>
+            <a href="galerie.html" class="nav-link">Galerie</a>
             <a href="kontakt.html" class="nav-link">Kontakt</a>
         </nav>
         <a href="kontakt.html" class="header-cta btn btn-sage">Termin anfragen</a>
-        <button class="hamburger" id="hamburger" aria-label="Menü">
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
 </header>
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero" id="main">
     <div class="hero-bg">
-        <img src="images/hero/shop.jpg" alt="Blumen Werkstatt Laden in Zeltingen-Rachtig">
+        <img src="images/hero/shop.jpg" alt="Blumen Werkstatt Laden in Zeltingen-Rachtig an der Mosel" width="1920" height="1080">
     </div>
     <div class="container">
         <div class="hero-content">
             <span class="section-label">Blumen Werkstatt · Zeltingen-Rachtig</span>
-            <h1>Blumen, die<br>Geschichten erzählen</h1>
-            <p>Von der Tischdekoration bis zum Brautstrauß: handgebunden, mit Herz und einem Gespür für das Besondere. Willkommen bei Carina Thiesen.</p>
+            <h1>Für die Momente,<br>die bleiben sollen</h1>
+            <p>Handgebundene Sträuße, Hochzeitsfloristik und kreative Workshops an der Mosel. Jedes Arrangement erzählt Ihre Geschichte.</p>
             <div class="btn-group">
-                <a href="kontakt.html" class="btn btn-sage">Jetzt anfragen</a>
-                <a href="leistungen.html" class="btn btn-outline">Unsere Leistungen</a>
+                <a href="kontakt.html" class="btn btn-sage">Unverbindlich anfragen</a>
+                <a href="leistungen.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: white;">Unsere Leistungen</a>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
 
 <!-- Stats / Trust Bar -->
 <div class="stats-bar fade-in">
@@ -161,11 +215,6 @@
     </div>
 </div>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
 <!-- Services Overview -->
 <section class="section-alt">
     <div class="container">
@@ -175,27 +224,33 @@
         </div>
         <div class="grid-3 stagger-parent fade-in" style="margin-top: 48px;">
             <div class="card">
-                <img src="images/galerie/muttertag.jpg" alt="Floristik für jeden Anlass" class="card-img">
+                <div class="card-img-wrapper">
+                    <img src="images/galerie/muttertag.jpg" alt="Handgebundener Blumenstrauß zum Muttertag" class="card-img" loading="lazy" width="400" height="260">
+                </div>
                 <div class="card-body">
                     <h3>Floristik für jeden Anlass</h3>
-                    <p>Ob Geburtstagsstrauß, Trauerfloristik oder ein spontanes „Dankeschön". Jeder Strauß wird individuell und frisch gebunden.</p>
-                    <a href="leistungen.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 10px 20px;">Mehr erfahren →</a>
+                    <p>Ein Geburtstagsgruß, der sprachlos macht. Ein Dankeschön, das mehr sagt als tausend Worte. Jeder Strauß wird frisch und individuell für Sie gebunden.</p>
+                    <a href="leistungen.html" class="btn btn-outline btn-sm">Mehr erfahren</a>
                 </div>
             </div>
             <div class="card">
-                <img src="images/hochzeit/strauss.jpg" alt="Hochzeitsfloristik Brautstrauß" class="card-img">
+                <div class="card-img-wrapper">
+                    <img src="images/hochzeit/strauss.jpg" alt="Brautstrauß in Rosé und Weiß" class="card-img" loading="lazy" width="400" height="260">
+                </div>
                 <div class="card-body">
                     <h3>Hochzeitsfloristik</h3>
-                    <p>Ihr schönster Tag verdient Blumen, die perfekt zu Ihnen passen. Brautstrauß, Kirchenschmuck, Tischdeko, alles aus einer Hand.</p>
-                    <a href="hochzeiten.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 10px 20px;">Hochzeiten ansehen →</a>
+                    <p>Ihr schönster Tag verdient Blumen, die perfekt zu Ihnen passen. Vom Brautstrauß bis zur Tischdeko: alles aus einer Hand, alles mit Herz.</p>
+                    <a href="hochzeiten.html" class="btn btn-outline btn-sm">Hochzeiten ansehen</a>
                 </div>
             </div>
             <div class="card">
-                <img src="images/workshop/blumen.jpg" alt="Kreative Workshops mit Carina" class="card-img">
+                <div class="card-img-wrapper">
+                    <img src="images/workshop/blumen.jpg" alt="Blumen-Workshop mit frischen Blumen und Wein" class="card-img" loading="lazy" width="400" height="260">
+                </div>
                 <div class="card-body">
                     <h3>Kreative Workshops</h3>
-                    <p>Kränze binden, Gestecke gestalten, dabei Moselwein genießen. Unsere Workshops im Weingut Heinrichshof sind das perfekte Erlebnis.</p>
-                    <a href="workshops.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 10px 20px;">Workshops entdecken →</a>
+                    <p>Kränze binden, Gestecke gestalten und dabei Moselwein genießen. Unsere Workshops im Weingut Heinrichshof sind das perfekte Erlebnis zu zweit oder in der Gruppe.</p>
+                    <a href="workshops.html" class="btn btn-outline btn-sm">Workshops entdecken</a>
                 </div>
             </div>
         </div>
@@ -205,67 +260,79 @@
 <!-- About Teaser -->
 <section>
     <div class="container">
-        <div class="grid-2">
-            <div class="home-about-img fade-in" style="height: 450px;">
-                <img src="images/galerie/blumen-herz.jpg" alt="Blumenherz, handgebunden in der Blumen Werkstatt" style="height: 100%; object-fit: cover;">
+        <div class="grid-asymmetric">
+            <div class="fade-in-left" style="border-radius: var(--radius-xl); overflow: hidden; height: 480px; box-shadow: var(--shadow-lg);">
+                <img src="images/galerie/blumen-herz.jpg" alt="Blumenherz, handgebunden in der Blumen Werkstatt" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" width="600" height="480">
             </div>
-            <div class="fade-in">
+            <div class="fade-in-right">
                 <span class="section-label">Über die Werkstatt</span>
-                <h2 class="section-title">Mit Herzblut und grünem Daumen</h2>
-                <p>Was als Leidenschaft begann, ist heute die Blumen Werkstatt in der Marienstraße. Carina Thiesen verbindet traditionelles Handwerk mit einem modernen Blick für Ästhetik.</p>
-                <p>Jeder Strauß, jede Dekoration, jedes Gesteck wird mit dem gleichen Anspruch gefertigt: Es soll nicht nur schön sein. Es soll berühren.</p>
-                <img src="images/unterschrift.png" alt="Carina Thiesen" class="signature" style="margin: 20px 0;">
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: -8px;">Carina Thiesen, Inhaberin</p>
+                <h2 class="section-title">Wo Leidenschaft auf Handwerk trifft</h2>
+                <p>Was als Traum begann, ist heute die Blumen Werkstatt in der Marienstraße. Carina Thiesen verbindet traditionelles Floristik-Handwerk mit einem Auge für das Besondere.</p>
+                <p>Jeder Strauß, jede Dekoration wird mit dem gleichen Anspruch gefertigt: Es soll nicht nur schön sein. Es soll den Moment einfangen und Emotionen wecken.</p>
+                <img src="images/unterschrift.png" alt="Unterschrift Carina Thiesen" class="signature" style="margin: 20px 0;" loading="lazy" width="160" height="48">
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: -8px;">Carina Thiesen, Inhaberin</p>
+                <a href="ueber-uns.html" class="btn btn-ghost" style="margin-top: 8px;">Mehr über Carina erfahren →</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
 <!-- Reviews -->
-<section class="section-alt" style="position: relative; overflow: hidden;">
-    <img src="images/decoratives/watercolor-corner-accent-bottom-left-corner-V1.png" alt="" class="corner-accent corner-bl" style="position: absolute; left: 0; bottom: 0; width: 180px; opacity: 0.25; z-index: 0; pointer-events: none;">
-    <img src="images/decoratives/watercolor-corner-accent-bottom-right-corner-V1.png" alt="" class="corner-accent corner-br" style="position: absolute; right: 0; bottom: 0; width: 180px; opacity: 0.25; z-index: 0; pointer-events: none;">
+<section class="section-dark" style="position: relative; overflow: hidden;">
     <div class="container">
         <div class="text-center fade-in">
             <span class="section-label">Kundenstimmen</span>
             <h2 class="section-title">Was unsere Kunden sagen</h2>
-            <p class="section-subtitle" style="margin: 0 auto;">5,0 Sterne bei Google. Jede einzelne Bewertung bedeutet uns viel.</p>
+            <div style="margin-top: 12px;">
+                <span class="review-rating-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    5,0 bei Google · 25+ Bewertungen
+                </span>
+            </div>
         </div>
         <div class="grid-3 stagger-parent fade-in" style="margin-top: 48px;">
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p class="review-text">„Wunderschöne Blumenarrangements! Carina hat unsere Hochzeit mit atemberaubenden Blumen verzaubert. Die persönliche Beratung war fantastisch."</p>
-                <p class="review-author">Google-Bewertung</p>
+            <div class="review-card" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">
+                <div class="review-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="review-text" style="color: rgba(255,255,255,0.75);">„Wunderschöne Blumenarrangements! Carina hat unsere Hochzeit mit atemberaubenden Blumen verzaubert. Die persönliche Beratung war fantastisch."</p>
+                <p class="review-author" style="color: white;">Google-Bewertung</p>
             </div>
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p class="review-text">„Jeder Strauß ist einzigartig und mit so viel Liebe gebunden. Man merkt, dass hier jemand arbeitet, der Blumen wirklich liebt. Immer wieder gerne!"</p>
-                <p class="review-author">Google-Bewertung</p>
+            <div class="review-card" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">
+                <div class="review-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="review-text" style="color: rgba(255,255,255,0.75);">„Jeder Strauß ist einzigartig und mit so viel Liebe gebunden. Man merkt, dass hier jemand arbeitet, der Blumen wirklich liebt. Immer wieder gerne!"</p>
+                <p class="review-author" style="color: white;">Google-Bewertung</p>
             </div>
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p class="review-text">„Der Workshop war ein Traum! Tolle Atmosphäre, super Anleitung und am Ende nimmt man ein wunderschönes selbstgemachtes Werk mit nach Hause."</p>
-                <p class="review-author">Google-Bewertung</p>
+            <div class="review-card" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08);">
+                <div class="review-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="review-text" style="color: rgba(255,255,255,0.75);">„Der Workshop war ein Traum! Tolle Atmosphäre, super Anleitung und am Ende nimmt man ein wunderschönes selbstgemachtes Werk mit nach Hause."</p>
+                <p class="review-author" style="color: white;">Google-Bewertung</p>
             </div>
         </div>
-        <div class="text-center" style="margin-top: 32px;">
-            <a href="https://www.google.com/maps/place/Blumen+Werkstatt/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.9rem;">Alle 25+ Bewertungen auf Google lesen →</a>
+        <div class="text-center" style="margin-top: 36px;">
+            <a href="https://www.google.com/maps/place/Blumen+Werkstatt/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">Alle Bewertungen auf Google lesen</a>
         </div>
     </div>
 </section>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
-<!-- Galerie Teaser -->
-<section class="section-sage">
+<!-- Gallery Teaser -->
+<section>
     <div class="container">
         <div class="text-center fade-in">
             <span class="section-label">Einblicke</span>
@@ -273,44 +340,42 @@
         </div>
         <div class="gallery-grid stagger-parent fade-in" style="margin-top: 40px;">
             <div class="gallery-item">
-                <img src="images/workshop/lehre.jpg" alt="Floristik Workshop Anleitung">
+                <img src="images/workshop/lehre.jpg" alt="Floristik Workshop: Carina zeigt eine Technik" loading="lazy" width="400" height="300">
             </div>
             <div class="gallery-item">
-                <img src="images/hochzeit/dekoration.jpg" alt="Hochzeitsdekoration">
+                <img src="images/hochzeit/dekoration.jpg" alt="Hochzeitsdekoration mit Blumen und Kerzen" loading="lazy" width="400" height="300">
             </div>
             <div class="gallery-item">
-                <img src="images/workshop/kuerbisse.jpg" alt="Herbst-Workshop">
+                <img src="images/workshop/kuerbisse.jpg" alt="Herbst-Workshop mit Kürbissen und Blumen" loading="lazy" width="400" height="300">
             </div>
             <div class="gallery-item">
-                <img src="images/hochzeit/kirche.jpg" alt="Kirchenschmuck">
+                <img src="images/hochzeit/kirche.jpg" alt="Blumenschmuck in der Kirche für eine Hochzeit" loading="lazy" width="400" height="300">
             </div>
             <div class="gallery-item">
-                <img src="images/workshop/dekoration.jpg" alt="Workshop Dekoration">
+                <img src="images/workshop/dekoration.jpg" alt="Workshop Tischdekoration mit frischen Blumen" loading="lazy" width="400" height="300">
             </div>
             <div class="gallery-item">
-                <img src="images/galerie/feuerwehr.jpg" alt="Feuerwehr Blumenschmuck">
+                <img src="images/galerie/feuerwehr.jpg" alt="Blumenschmuck auf einem Feuerwehrwagen" loading="lazy" width="400" height="300">
             </div>
+        </div>
+        <div class="text-center" style="margin-top: 36px;">
+            <a href="galerie.html" class="btn btn-outline btn-sm">Alle Bilder ansehen</a>
         </div>
     </div>
 </section>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
-
 <!-- Workshop CTA -->
-<section>
+<section class="section-alt">
     <div class="container">
-        <div class="workshop-highlight fade-in">
+        <div class="workshop-highlight fade-in scale-in">
             <div class="grid-2">
                 <div class="workshop-highlight-img">
-                    <img src="images/workshop/wein.jpg" alt="Workshop im Weingut Heinrichshof">
+                    <img src="images/workshop/wein.jpg" alt="Blumen-Workshop mit Weinverkostung im Weingut Heinrichshof" loading="lazy" width="600" height="400">
                 </div>
                 <div class="workshop-highlight-body">
                     <span class="badge">Nächster Workshop</span>
-                    <h2 style="margin-top: 16px;">Kreativ werden mit Blumen &amp; Wein</h2>
-                    <p style="margin-top: 12px;">Unsere Workshops im Weingut Heinrichshof an der Mosel verbinden Floristik mit Genuss. Gestalten Sie Ihr eigenes Blumenwerk, begleitet von regionalem Wein und guter Gesellschaft.</p>
+                    <h2 style="margin-top: 16px;">Kreativ werden bei Blumen &amp; Wein</h2>
+                    <p style="margin-top: 12px;">Unsere Workshops im Weingut Heinrichshof verbinden Floristik mit Genuss. Gestalten Sie Ihr eigenes Blumenwerk, begleitet von regionalem Moselwein und guter Gesellschaft.</p>
                     <ul class="feature-list" style="margin-top: 16px;">
                         <li>Alle Materialien inklusive</li>
                         <li>Moselwein &amp; kleine Snacks</li>
@@ -318,7 +383,7 @@
                         <li>Perfekt als Geschenk oder Teamausflug</li>
                     </ul>
                     <div style="margin-top: 24px;">
-                        <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" target="_blank" rel="noopener" class="btn btn-sage">Tickets sichern →</a>
+                        <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" target="_blank" rel="noopener" class="btn btn-sage">Tickets sichern</a>
                     </div>
                     <div class="partner-logo">
                         <span>In Kooperation mit Weingut Heinrichshof</span>
@@ -329,17 +394,75 @@
     </div>
 </section>
 
-<!-- Vine Separator -->
-<div class="section-divider">
-    <img src="images/decoratives/vine-separator.png" alt="" class="divider-img">
-</div>
+<!-- FAQ Section -->
+<section>
+    <div class="container">
+        <div class="text-center fade-in">
+            <span class="section-label">Häufige Fragen</span>
+            <h2 class="section-title">Gut zu wissen</h2>
+        </div>
+        <div class="faq-section fade-in" style="margin-top: 48px;">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Welche Leistungen bietet die Blumen Werkstatt an?
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Wir bieten handgebundene Sträuße für jeden Anlass, individuelle Hochzeitsfloristik (Brautstrauß, Kirchenschmuck, Tischdekoration), einfühlsame Trauerfloristik, florale Dekorationen für Events und kreative Workshops im Weingut Heinrichshof an der Mosel.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Wo befindet sich die Blumen Werkstatt?
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Die Blumen Werkstatt von Carina Thiesen befindet sich in der Marienstraße 31, 54492 Zeltingen-Rachtig an der Mosel. Wir beliefern auch die umliegenden Orte wie Bernkastel-Kues, Traben-Trarbach, Wittlich und die gesamte Moselregion.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Wann hat die Blumen Werkstatt geöffnet?
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Montag, Dienstag, Donnerstag und Freitag: 09:00 bis 12:00 Uhr und 14:00 bis 18:00 Uhr. Samstag: 09:00 bis 13:00 Uhr. Mittwoch und Sonntag geschlossen. Termine nach Vereinbarung sind auch außerhalb der Öffnungszeiten möglich.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Kann ich Blumen auch kurzfristig bestellen?
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Ja, wir binden Sträuße auch spontan und frisch. Für besondere Anlässe wie Hochzeiten oder größere Events empfehlen wir eine Beratung mindestens 4 bis 6 Wochen im Voraus. Rufen Sie uns einfach an oder schreiben Sie uns per WhatsApp.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Wie kann ich einen Workshop buchen?
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Unsere Workshops finden regelmäßig im Weingut Heinrichshof statt. Tickets können direkt über den <a href="https://www.shop.weingut-heinrichshof.de/de/veranstaltungen/" target="_blank" rel="noopener" style="color: var(--sage-dark); text-decoration: underline;">Online-Shop des Weinguts</a> gebucht werden. Alle Materialien, Moselwein und kleine Snacks sind im Preis enthalten.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- CTA Banner -->
 <section class="cta-banner">
     <div class="container">
         <h2>Lassen Sie uns Ihren Anlass unvergesslich machen</h2>
-        <p>Ob Hochzeit, Jubiläum oder einfach eine Freude, sprechen Sie uns an.</p>
-        <a href="kontakt.html" class="btn btn-white">Jetzt Kontakt aufnehmen</a>
+        <p>Ob Hochzeit, Jubiläum oder einfach eine Freude: Erzählen Sie uns, was Sie sich vorstellen.</p>
+        <div class="btn-group" style="justify-content: center;">
+            <a href="kontakt.html" class="btn btn-white">Jetzt Kontakt aufnehmen</a>
+            <a href="tel:+491781361809" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: white;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Anrufen
+            </a>
+        </div>
     </div>
 </section>
 
@@ -348,11 +471,14 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <img src="images/logo.png" alt="Blumen Werkstatt" class="footer-logo">
-                <p class="footer-about">Ihre Floristin in Zeltingen-Rachtig. Sträuße, Hochzeitsfloristik und kreative Workshops an der Mosel, mit Liebe zum Detail.</p>
+                <img src="images/logo.png" alt="Blumen Werkstatt" class="footer-logo" width="60" height="60">
+                <p class="footer-about">Ihre Floristin in Zeltingen-Rachtig an der Mosel. Handgebundene Sträuße, Hochzeitsfloristik und kreative Workshops. Mit Liebe zum Detail, seit 2018.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/blumen.werkstatt_/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     </a>
                     <a href="tel:+491781361809" aria-label="Anrufen" class="social-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -368,6 +494,8 @@
                 <a href="leistungen.html">Leistungen</a>
                 <a href="hochzeiten.html">Hochzeiten</a>
                 <a href="workshops.html">Workshops</a>
+                <a href="ueber-uns.html">Über uns</a>
+                <a href="galerie.html">Galerie</a>
                 <a href="kontakt.html">Kontakt</a>
             </div>
             <div class="footer-col">
@@ -376,20 +504,20 @@
                 <a href="hochzeiten.html">Hochzeitsfloristik</a>
                 <a href="workshops.html">Workshops</a>
                 <a href="leistungen.html">Trauerfloristik</a>
-                <a href="leistungen.html">Dekorationen</a>
+                <a href="leistungen.html">Dekorationen &amp; Events</a>
             </div>
             <div class="footer-col footer-contact">
                 <h4>Kontakt</h4>
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    Marienstraße 31<br><span style="margin-left: 26px;">54492 Zeltingen-Rachtig</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Marienstraße 31<br>54492 Zeltingen-Rachtig</span>
                 </p>
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     <a href="tel:+491781361809">+49 178 136 1809</a>
                 </p>
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     <a href="mailto:carina.thiesen@googlemail.com">carina.thiesen@googlemail.com</a>
                 </p>
             </div>
@@ -403,6 +531,23 @@
         </div>
     </div>
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp Nachricht senden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Mobile CTA Bar -->
+<div class="mobile-cta-bar">
+    <a href="tel:+491781361809" class="btn btn-call">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Anrufen
+    </a>
+    <a href="https://wa.me/491781361809?text=Hallo%20Carina%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Blumen.%20K%C3%B6nnen%20Sie%20mir%20weiterhelfen%3F" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+    </a>
+</div>
 
 <!-- Back to Top -->
 <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
